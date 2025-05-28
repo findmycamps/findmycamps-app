@@ -11,6 +11,7 @@ import CampProfilePage from "./components/CampProfilePage";
 import { ALL_CAMPS_DATA } from "./data/mockCamps";
 import LoginModal from "./components/LoginModal";
 import ResetPasswordModal from "./components/ResetPasswordModal";
+import SignUpModal from "./components/SignUpModal";
 
 function App() {
   const [filteredCamps, setFilteredCamps] = useState(ALL_CAMPS_DATA);
@@ -21,6 +22,7 @@ function App() {
   const [selectedCamp, setSelectedCamp] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showReset, setShowReset] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -67,7 +69,7 @@ function App() {
         onLoginClick={() => setShowLoginModal(true)}
         />
       
-      {showLoginModal && !showReset && (
+      {showLoginModal && !showReset && !showSignUp && (
         <LoginModal
           darkMode={darkMode}
           onClose={() => setShowLoginModal(false)}
@@ -75,12 +77,22 @@ function App() {
             setShowLoginModal(false);
             setShowReset(true);
           }}
+          onSignUp={() => {
+            setShowLoginModal(false);
+            setShowSignUp(true);
+          }}
         />
       )}
       {showReset && (
         <ResetPasswordModal
           darkMode={darkMode}
           onClose={() => setShowReset(false)}
+        />
+      )}
+      {showSignUp && (
+        <SignUpModal
+          darkMode={darkMode}
+          onClose={() => setShowSignUp(false)}
         />
       )}
 

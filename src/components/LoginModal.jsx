@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ResetPasswordModal from "./ResetPasswordModal";
 
-const LoginModal = ({ onClose, darkMode }) => {
+const LoginModal = ({ onClose, darkMode, onResetPassword, onSignUp }) => {
   const [showReset, setShowReset] = useState(false);
 
   if (showReset) {
@@ -32,8 +32,8 @@ const LoginModal = ({ onClose, darkMode }) => {
           Sign In
         </button>
         <div className="text-sm mt-4 text-center text-gray-500">
-          <button onClick={() => setShowReset(true)} className="underline">Forgot password?</button> |{" "}
-          <button className="underline">Sign up</button>
+            <button onClick={onResetPassword} className="underline">Forgot password?</button> |{" "}
+            <button onClick={onSignUp} className="underline">Sign up</button>
         </div>
       </div>
     </div>
