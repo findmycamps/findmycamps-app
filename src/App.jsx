@@ -9,6 +9,8 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import CampProfilePage from "./components/CampProfilePage";
 import { ALL_CAMPS_DATA } from "./data/mockCamps";
+import LoginModal from "./components/LoginModal";
+import ResetPasswordModal from "./components/ResetPasswordModal";
 
 function App() {
   const [filteredCamps, setFilteredCamps] = useState(ALL_CAMPS_DATA);
@@ -17,6 +19,8 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [darkMode, setDarkMode] = useState(false);
   const [selectedCamp, setSelectedCamp] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showReset, setShowReset] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -57,7 +61,30 @@ function App() {
         darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-100 text-gray-800"
       }`}
     >
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header 
+        darkMode={darkMode} 
+        toggleDarkMode={toggleDarkMode} 
+        onLoginClick={() => setShowLoginModal(true)}
+        />
+      
+      {showLoginModal && !showReset && (
+        <LoginModal
+          darkMode={darkMode}
+          onClose={() => setShowLoginModal(false)}
+          onResetPassword={() => {
+            setShowLoginModal(false);
+            setShowReset(true);
+          }}
+        />
+      )}
+      {showReset && (
+        <ResetPasswordModal
+          darkMode={darkMode}
+          onClose={() => setShowReset(false)}
+        />
+      )}
+
+
       {!selectedCamp && <ImageSlideshow darkMode={darkMode} />}
 
       {selectedCamp ? (

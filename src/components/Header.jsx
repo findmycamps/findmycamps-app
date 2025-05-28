@@ -1,7 +1,7 @@
 import React from "react";
 import { Smile, Sun, Moon, UserCircle } from "lucide-react";
 
-const Header = ({ darkMode, toggleDarkMode }) => (
+const Header = ({ darkMode, toggleDarkMode, onLoginClick }) => (
   <header
     className={`py-4 shadow-md sticky top-0 z-50 transition-colors duration-300 ${
       darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
@@ -38,6 +38,7 @@ const Header = ({ darkMode, toggleDarkMode }) => (
           List a Camp
         </button>
         <button
+          onClick={onLoginClick}
           className={`flex items-center px-3 py-2 sm:px-4 text-sm sm:text-base rounded-lg font-semibold transition-all duration-300 ease-in-out whitespace-nowrap ${
             darkMode
               ? "bg-green-500 hover:bg-green-400 text-white"
