@@ -16,7 +16,9 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
 
   if (camps.length === 0) {
     return (
-      <p className={`text-center text-lg sm:text-xl py-10 ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+      <p
+        className={`text-center text-lg sm:text-xl py-10 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+      >
         No camps found matching your criteria. Try adjusting your filters!
       </p>
     );
@@ -39,7 +41,9 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
           onClick={() => scroll("left")}
           aria-label="Scroll left"
           className={`absolute -left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-            darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-700"
+            darkMode
+              ? "bg-gray-700 hover:bg-gray-600 text-white"
+              : "bg-gray-200 hover:bg-gray-300 text-gray-700"
           } shadow-md`}
         >
           <ArrowLeftCircle size={30} />
@@ -53,7 +57,12 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
           }`}
         >
           {camps.map((camp) => (
-            <CampCard key={camp.id} camp={camp} darkMode={darkMode} onClick={onCardClick} />
+            <CampCard
+              key={camp.id}
+              camp={camp}
+              darkMode={darkMode}
+              onClick={onCardClick}
+            />
           ))}
         </div>
 
@@ -62,7 +71,9 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
           onClick={() => scroll("right")}
           aria-label="Scroll right"
           className={`absolute -right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-            darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-700"
+            darkMode
+              ? "bg-gray-700 hover:bg-gray-600 text-white"
+              : "bg-gray-200 hover:bg-gray-300 text-gray-700"
           } shadow-md`}
         >
           <ArrowRightCircle size={30} />

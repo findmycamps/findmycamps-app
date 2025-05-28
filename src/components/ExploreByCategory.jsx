@@ -2,7 +2,11 @@ import React from "react";
 import { Compass, Sun, Palette, Cpu, Leaf, BookOpen } from "lucide-react";
 import { CATEGORIES_WITH_ICONS } from "../data/mockCamps";
 
-const ExploreByCategory = ({ onCategoryChange, selectedCategory, darkMode }) => {
+const ExploreByCategory = ({
+  onCategoryChange,
+  selectedCategory,
+  darkMode,
+}) => {
   return (
     <div className="my-8 md:my-12">
       <h2
@@ -35,8 +39,8 @@ const ExploreByCategory = ({ onCategoryChange, selectedCategory, darkMode }) => 
                       ? "bg-indigo-600 text-white shadow-lg ring-indigo-400"
                       : "bg-indigo-500 text-white shadow-lg ring-indigo-500"
                     : darkMode
-                    ? "bg-gray-700 hover:bg-gray-600 text-gray-300 ring-gray-600"
-                    : "bg-white hover:bg-gray-100 text-gray-700 shadow-md ring-gray-300"
+                      ? "bg-gray-700 hover:bg-gray-600 text-gray-300 ring-gray-600"
+                      : "bg-white hover:bg-gray-100 text-gray-700 shadow-md ring-gray-300"
                 }`}
             >
               <IconComponent
@@ -44,8 +48,8 @@ const ExploreByCategory = ({ onCategoryChange, selectedCategory, darkMode }) => 
                   isActive
                     ? "text-white"
                     : darkMode
-                    ? category.color.replace("text-", "text-gray-300")
-                    : category.color
+                      ? category.color.replace("text-", "text-gray-300")
+                      : category.color
                 }`}
               />
               <span
@@ -53,8 +57,8 @@ const ExploreByCategory = ({ onCategoryChange, selectedCategory, darkMode }) => 
                   isActive
                     ? "text-white"
                     : darkMode
-                    ? "text-gray-200"
-                    : "text-gray-800"
+                      ? "text-gray-200"
+                      : "text-gray-800"
                 }`}
               >
                 {category.name === "All Categories" ? "All" : category.name}

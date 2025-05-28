@@ -27,7 +27,9 @@ const HowItWorks = ({ darkMode }) => {
   ];
 
   return (
-    <section className={`py-12 md:py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+    <section
+      className={`py-12 md:py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}
+    >
       <div className="container mx-auto px-6">
         <h2
           className={`text-2xl sm:text-3xl font-bold mb-4 text-center ${
@@ -50,7 +52,9 @@ const HowItWorks = ({ darkMode }) => {
               <div
                 key={index}
                 className={`p-6 rounded-xl shadow-lg transition-all duration-300 text-center ${
-                  darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-white hover:shadow-xl"
+                  darkMode
+                    ? "bg-gray-700 hover:bg-gray-600"
+                    : "bg-white hover:shadow-xl"
                 }`}
               >
                 <div
@@ -60,10 +64,16 @@ const HowItWorks = ({ darkMode }) => {
                 >
                   <IconComponent className={`w-10 h-10 ${step.color}`} />
                 </div>
-                <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-gray-800"}`}>
+                <h3
+                  className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-gray-800"}`}
+                >
                   {step.title}
                 </h3>
-                <p className={`text-sm ${darkMode ? "text-gray-300" : "text-gray-600"}`}>{step.description}</p>
+                <p
+                  className={`text-sm ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+                >
+                  {step.description}
+                </p>
               </div>
             );
           })}
