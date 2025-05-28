@@ -13,6 +13,7 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
       behavior: "smooth",
     });
   };
+  
 
   if (camps.length === 0) {
     return (
