@@ -39,7 +39,9 @@ function App() {
         (camp) =>
           camp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           camp.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          camp.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+          camp.tags.some((tag) =>
+            tag.toLowerCase().includes(searchTerm.toLowerCase()),
+          ),
       );
     }
     if (selectedLocation !== "ALL") {
@@ -61,7 +63,11 @@ function App() {
       {!selectedCamp && <ImageSlideshow darkMode={darkMode} />}
 
       {selectedCamp ? (
-        <CampProfilePage camp={selectedCamp} onBack={() => setSelectedCamp(null)} darkMode={darkMode} />
+        <CampProfilePage
+          camp={selectedCamp}
+          onBack={() => setSelectedCamp(null)}
+          darkMode={darkMode}
+        />
       ) : (
         <>
           {/* Headline & subtitle below slideshow */}
@@ -85,7 +91,11 @@ function App() {
               selectedCategory={selectedCategory}
               darkMode={darkMode}
             />
-            <CampList camps={filteredCamps} darkMode={darkMode} onCardClick={setSelectedCamp} />
+            <CampList
+              camps={filteredCamps}
+              darkMode={darkMode}
+              onCardClick={setSelectedCamp}
+            />
           </main>
           <HowItWorks darkMode={darkMode} />
           <Testimonials darkMode={darkMode} />

@@ -48,7 +48,9 @@ const Testimonials = ({ darkMode }) => {
             <div
               key={index}
               className={`p-6 rounded-xl shadow-lg transition-all duration-300 ${
-                darkMode ? "bg-gray-800 text-gray-300" : "bg-white text-gray-700"
+                darkMode
+                  ? "bg-gray-800 text-gray-300"
+                  : "bg-white text-gray-700"
               }`}
             >
               <div className="flex items-center mb-4">
@@ -64,7 +66,9 @@ const Testimonials = ({ darkMode }) => {
                   }}
                 />
                 <div>
-                  <h4 className={`font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}>
+                  <h4
+                    className={`font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}
+                  >
                     {testimonial.name}
                   </h4>
                   <div className="flex">
@@ -72,7 +76,11 @@ const Testimonials = ({ darkMode }) => {
                       <Star
                         key={i}
                         className={`w-4 h-4 ${
-                          i < testimonial.rating ? "text-yellow-400" : darkMode ? "text-gray-600" : "text-gray-300"
+                          i < testimonial.rating
+                            ? "text-yellow-400"
+                            : darkMode
+                              ? "text-gray-600"
+                              : "text-gray-300"
                         }`}
                         fill={i < testimonial.rating ? "currentColor" : "none"}
                       />
@@ -80,7 +88,9 @@ const Testimonials = ({ darkMode }) => {
                   </div>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed italic">"{testimonial.quote}"</p>
+              <p className="text-sm leading-relaxed italic">
+                "{testimonial.quote}"
+              </p>
             </div>
           ))}
         </div>

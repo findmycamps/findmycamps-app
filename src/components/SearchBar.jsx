@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Search, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { PROVINCES } from "../data/mockCamps";
 
-const SearchBar = ({ onSearch, onLocationChange, selectedLocation, darkMode }) => {
+const SearchBar = ({
+  onSearch,
+  onLocationChange,
+  selectedLocation,
+  darkMode,
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
 
@@ -85,7 +90,9 @@ const SearchBar = ({ onSearch, onLocationChange, selectedLocation, darkMode }) =
           {isLocationDropdownOpen && (
             <div
               className={`absolute z-20 mt-1 w-full rounded-md shadow-lg max-h-60 overflow-auto transition-all duration-300 origin-top ${
-                darkMode ? "bg-gray-800 border border-gray-600" : "bg-white border border-gray-200"
+                darkMode
+                  ? "bg-gray-800 border border-gray-600"
+                  : "bg-white border border-gray-200"
               }`}
             >
               {PROVINCES.map((province) => (
@@ -93,7 +100,9 @@ const SearchBar = ({ onSearch, onLocationChange, selectedLocation, darkMode }) =
                   key={province.code}
                   onClick={() => handleLocationSelect(province.code)}
                   className={`px-4 py-3 cursor-pointer transition-colors duration-150 ${
-                    darkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-indigo-50"
+                    darkMode
+                      ? "text-gray-300 hover:bg-gray-700"
+                      : "text-gray-700 hover:bg-indigo-50"
                   }`}
                 >
                   {province.name}

@@ -16,7 +16,10 @@ const ImageSlideshow = ({ darkMode }) => {
   }, []);
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + SLIDESHOW_IMAGES.length) % SLIDESHOW_IMAGES.length);
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + SLIDESHOW_IMAGES.length) % SLIDESHOW_IMAGES.length,
+    );
   };
 
   useEffect(() => {
@@ -65,8 +68,8 @@ const ImageSlideshow = ({ darkMode }) => {
                   ? "bg-indigo-400"
                   : "bg-indigo-600"
                 : darkMode
-                ? "bg-gray-600"
-                : "bg-gray-300"
+                  ? "bg-gray-600"
+                  : "bg-gray-300"
             } hover:bg-indigo-500`}
             aria-label={`Go to slide ${index + 1}`}
           />
