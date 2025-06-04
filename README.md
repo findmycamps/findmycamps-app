@@ -16,6 +16,16 @@
 
 ---
 
+---
+
+## Deployment
+
+This application is continuously deployed as a Static Site using [Render](https://render.com/). Any pushes or merges to the `main` branch will trigger a new deployment.
+
+- **Production URL:** [https://findmycamps-app.onrender.com/](https://findmycamps-app.onrender.com/)
+
+---
+
 ## Getting Started
 
 ### Prerequisites
