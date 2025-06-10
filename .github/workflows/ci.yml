@@ -14,10 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Scan for secrets with truffleHog
+      - name: Scan for secrets
         uses: trufflesecurity/trufflehog@main
-        with:
-          scanArguments: --path=.
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
