@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import ImageSlideshow from "./components/ImageSlideshow";
-import SearchBar from "./components/SearchBar";
-import ExploreByCategory from "./components/ExploreByCategory";
-import CampList from "./components/CampList";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
-import CampProfilePage from "./components/CampProfilePage";
-import { ALL_CAMPS_DATA } from "./data/mockCamps";
+import Header from "@/components/Header";
+import ImageSlideshow from "@/components/ImageSlideshow";
+import SearchBar from "@/components/SearchBar";
+import ExploreByCategory from "@/components/ExploreByCategory";
+import CampList from "@/components/CampList";
+import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
+import CampProfilePage from "@/components/CampProfilePage";
+import { ALL_CAMPS_DATA } from "@/data/mockCamps";
 
-function App() {
+export default function HomePage() {
   const [filteredCamps, setFilteredCamps] = useState(ALL_CAMPS_DATA);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("ALL");
@@ -105,5 +105,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
