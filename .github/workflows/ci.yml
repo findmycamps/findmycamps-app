@@ -33,26 +33,3 @@ jobs:
 
      # - name: Run tests
      #    run: npm test || echo "No tests defined"
-
-  deploy-to-render:
-    name: Deploy to Render
-    needs: build-and-test # This job runs only if 'build-and-test' job succeeds
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Only deploy on pushes to the main branch
-   
-    environment:
-      name: Render-Prod # Must match the name of your GitHub Environment
-      url: https://findmycamps-app.onrender.com/ # Optional: URL to display for the environment
-
-    runs-on: ubuntu-latest
-    steps:
-    - name: Trigger Render Deploy
-      env:
-        RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL_STATIC_SITE }}
-      run: |
-        if [ -z "$RENDER_DEPLOY_HOOK_URL" ]; then
-          echo "Render deploy hook URL secret is not set. Skipping deployment."
-          exit 1
-        fi
-        echo "Triggering Render deployment..."
-        curl --fail -X POST "$RENDER_DEPLOY_HOOK_URL"
-        echo "Render deployment triggered."
