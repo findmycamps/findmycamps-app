@@ -2,21 +2,29 @@ import React, { useState } from "react";
 import { Search, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { PROVINCES } from "../data/mockCamps";
 
-const SearchBar = ({
+interface SearchBarProps {
+  onSearch: (value: string) => void;
+  onLocationChange: (provinceCode: string) => void;
+  selectedLocation: string;
+  darkMode: boolean;
+}
+
+function SearchBar({
   onSearch,
   onLocationChange,
   selectedLocation,
   darkMode,
-}) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
+}: SearchBarProps) {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] =
+    useState<boolean>(false);
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
     onSearch(e.target.value);
   };
 
-  const handleLocationSelect = (provinceCode) => {
+  const handleLocationSelect = (provinceCode: string) => {
     onLocationChange(provinceCode);
     setIsLocationDropdownOpen(false);
   };
@@ -114,6 +122,6 @@ const SearchBar = ({
       </div>
     </div>
   );
-};
+}
 
 export default SearchBar;

@@ -1,3 +1,4 @@
+import type { Camp } from "@/types/Camp";
 import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import ImageSlideshow from "@/components/ImageSlideshow";
@@ -11,12 +12,13 @@ import CampProfilePage from "@/components/CampProfilePage";
 import { ALL_CAMPS_DATA } from "@/data/mockCamps";
 
 export default function HomePage() {
-  const [filteredCamps, setFilteredCamps] = useState(ALL_CAMPS_DATA);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("ALL");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [darkMode, setDarkMode] = useState(false);
-  const [selectedCamp, setSelectedCamp] = useState(null);
+  const [filteredCamps, setFilteredCamps] = useState<Camp[]>(ALL_CAMPS_DATA);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedLocation, setSelectedLocation] = useState<string>("ALL");
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>("All Categories");
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [selectedCamp, setSelectedCamp] = useState<Camp | null>(null);
 
   useEffect(() => {
     if (darkMode) {
@@ -30,7 +32,7 @@ export default function HomePage() {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  const toggleDarkMode = () => setDarkMode((v) => !v);
 
   useEffect(() => {
     let camps = ALL_CAMPS_DATA;

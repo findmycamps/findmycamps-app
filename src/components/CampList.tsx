@@ -1,11 +1,18 @@
+import type { Camp } from "@/types/Camp";
 import React, { useRef } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import CampCard from "./CampCard";
 
-const CampList = ({ camps, darkMode, onCardClick }) => {
-  const scrollContainerRef = useRef(null);
+interface CampListProps {
+  camps: Camp[];
+  darkMode: boolean;
+  onCardClick: (camp: Camp) => void;
+}
 
-  const scroll = (direction) => {
+function CampList({ camps, darkMode, onCardClick }: CampListProps) {
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (direction: "left" | "right") => {
     if (!scrollContainerRef.current) return;
     const scrollAmount = direction === "left" ? -300 : 300;
     scrollContainerRef.current.scrollBy({
@@ -81,6 +88,6 @@ const CampList = ({ camps, darkMode, onCardClick }) => {
       </div>
     </div>
   );
-};
+}
 
 export default CampList;

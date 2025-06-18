@@ -1,7 +1,11 @@
 import React from "react";
 import { Search, Users, BookOpen } from "lucide-react";
 
-const HowItWorks = ({ darkMode }) => {
+interface HowItWorksProps {
+  darkMode: boolean;
+}
+
+function HowItWorks({ darkMode }: HowItWorksProps) {
   const steps = [
     {
       icon: Search,
@@ -81,6 +85,6 @@ const HowItWorks = ({ darkMode }) => {
       </div>
     </section>
   );
-};
+}
 
 export default HowItWorks;
