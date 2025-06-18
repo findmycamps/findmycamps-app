@@ -1,28 +1,16 @@
-name: Deploy to Render
+name: CD
 
 on:
   push:
-    branches: [ main ]  # Only trigger on push to main!
+    branches: [ main ]   # Only runs on main branch pushes
 
 jobs:
   deploy-to-render:
     runs-on: ubuntu-latest
+    environment:
+      name: Render-Prod   # Make sure this matches your GitHub Environment name
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the app
-        run: npm run build
-
       - name: Trigger Render Deploy
         env:
           RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL_STATIC_SITE }}
