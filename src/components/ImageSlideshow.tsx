@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 
+interface ImageSlideshowProps {
+  darkMode: boolean;
+}
+
 const SLIDESHOW_IMAGES = [
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
@@ -8,7 +12,7 @@ const SLIDESHOW_IMAGES = [
   "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80",
 ];
 
-const ImageSlideshow = ({ darkMode }) => {
+function ImageSlideshow({ darkMode }: ImageSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -38,8 +42,9 @@ const ImageSlideshow = ({ darkMode }) => {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
           onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = `https://placehold.co/1200x500/${
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = `https://placehold.co/1200x500/${
               darkMode ? "4B5563" : "E5E7EB"
             }/${darkMode ? "F3F4F6" : "4B5563"}?text=Error`;
           }}
@@ -77,6 +82,6 @@ const ImageSlideshow = ({ darkMode }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ImageSlideshow;

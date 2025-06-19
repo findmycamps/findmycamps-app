@@ -1,5 +1,33 @@
 import { Compass, Sun, Palette, Cpu, Leaf, BookOpen } from "lucide-react";
 
+// --- Camp type ---
+export interface Camp {
+  id: number;
+  name: string;
+  province: string;
+  city: string;
+  description: string;
+  ageRange: string;
+  price: number;
+  imageUrl: string;
+  rating: number;
+  tags: string[];
+  category: string;
+}
+
+// --- Province type ---
+export interface Province {
+  code: string;
+  name: string;
+}
+
+// --- Category type ---
+export interface CategoryWithIcon {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+}
+
 export const ALL_CAMPS_DATA = [
   {
     id: 1,

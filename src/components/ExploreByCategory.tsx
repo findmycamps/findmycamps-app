@@ -2,11 +2,17 @@ import React from "react";
 import { Compass, Sun, Palette, Cpu, Leaf, BookOpen } from "lucide-react";
 import { CATEGORIES_WITH_ICONS } from "../data/mockCamps";
 
-const ExploreByCategory = ({
+interface ExploreByCategoryProps {
+  onCategoryChange: (categoryName: string) => void;
+  selectedCategory: string;
+  darkMode: boolean;
+}
+
+function ExploreByCategory({
   onCategoryChange,
   selectedCategory,
   darkMode,
-}) => {
+}: ExploreByCategoryProps) {
   return (
     <div className="my-8 md:my-12">
       <h2
@@ -69,6 +75,6 @@ const ExploreByCategory = ({
       </div>
     </div>
   );
-};
+}
 
 export default ExploreByCategory;
