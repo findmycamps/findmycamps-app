@@ -1,104 +1,92 @@
 import type { Camp } from "@/types/Camp";
+import type { GroupedCamp, CampSession } from "@/utils/campUtils";
 import React from "react";
-import { MapPin, Users, DollarSign, Tag, Star } from "lucide-react";
+import { MapPin, Users, DollarSign, Tag, Star, Calendar } from "lucide-react";
 
 interface CampCardProps {
-  camp: Camp;
+  camp: GroupedCamp;
   darkMode: boolean;
-  onClick: (camp: Camp) => void;
+  onClick: () => void;
 }
 
 function CampCard({ camp, darkMode, onClick }: CampCardProps) {
+  const imageUrl =
+    camp.image || "https://placehold.co/600x400?text=FindMyCamps";
+
+  // Helper to format a single date range
+  const formatDateRange = (session: CampSession) => {
+    const start = new Date(session.dates.startDate).toLocaleDateString(
+      "en-US",
+      { month: "short", day: "numeric" },
+    );
+    const end = new Date(session.dates.endDate).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    });
+    return `${start} - ${end}`;
+  };
+
+  // Helper to determine the price display
+  const getPriceDisplay = () => {
+    if (camp.sessions.length === 1) {
+      return `$${camp.sessions[0].price}`;
+    }
+    const prices = camp.sessions.map((s) => s.price);
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+    return minPrice === maxPrice
+      ? `$${minPrice}`
+      : `$${minPrice} - $${maxPrice}`;
+  };
   return (
     <div
-      className={`flex-shrink-0 w-72 sm:w-80 md:w-[340px] rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex flex-col cursor-pointer ${
-        darkMode ? "bg-gray-800 text-gray-200" : "bg-white"
-      }`}
-      onClick={() => onClick(camp)}
-      tabIndex={0}
-      role="button"
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          onClick(camp);
-        }
-      }}
+      onClick={onClick}
+      className={`flex-shrink-0 w-80 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 cursor-pointer ${darkMode ? "bg-gray-800" : "bg-white"}`}
     >
       <img
-        src={camp.imageUrl}
+        src={imageUrl}
         alt={camp.name}
-        className="w-full h-40 sm:h-48 object-cover"
-        onError={(e) => {
-          const target = e.target as HTMLImageElement;
-          target.onerror = null;
-          target.src = `https://placehold.co/600x400/${
-            darkMode ? "4B5563" : "E5E7EB"
-          }/${darkMode ? "F3F4F6" : "4B5563"}?text=Img+Error`;
-        }}
+        className="w-full h-40 object-cover"
       />
-      <div className="p-4 sm:p-5 flex flex-col flex-grow">
-        <h3
-          className={`text-lg sm:text-xl font-semibold mb-2 tracking-tight ${
-            darkMode ? "text-indigo-400" : "text-indigo-600"
-          }`}
-        >
-          {camp.name}
-        </h3>
-        <p
-          className={`text-xs sm:text-sm mb-3 flex-grow ${
-            darkMode ? "text-gray-400" : "text-gray-600"
-          }`}
-        >
-          {camp.description}
-        </p>
-        <div className="space-y-1.5 text-xs mb-3">
-          <div className="flex items-center">
-            <MapPin
-              className={`w-3.5 h-3.5 mr-1.5 ${
-                darkMode ? "text-gray-500" : "text-gray-400"
-              }`}
-            />{" "}
-            {camp.city}, {camp.province}
-          </div>
-          <div className="flex items-center">
-            <Users
-              className={`w-3.5 h-3.5 mr-1.5 ${
-                darkMode ? "text-gray-500" : "text-gray-400"
-              }`}
-            />{" "}
-            Ages: {camp.ageRange}
-          </div>
-          <div className="flex items-center">
-            <DollarSign
-              className={`w-3.5 h-3.5 mr-1.5 ${
-                darkMode ? "text-gray-500" : "text-gray-400"
-              }`}
-            />{" "}
-            C${camp.price}/week
-          </div>
-          <div className="flex items-center">
-            <Tag
-              className={`w-3.5 h-3.5 mr-1.5 ${
-                darkMode ? "text-gray-500" : "text-gray-400"
-              }`}
-            />{" "}
-            {camp.category}
-          </div>
+      <div className="p-4">
+        <h3 className="text-xl font-bold truncate">{camp.name}</h3>
+        <div className="flex items-center mt-3 text-sm">
+          <MapPin className="w-4 h-4 mr-2 text-blue-500" />
+          <span>{camp.location.address}</span>
         </div>
-        <div className="flex items-center justify-between mt-auto">
-          <div className="flex items-center">
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 mr-1" />
-            <span className="font-semibold text-sm">{camp.rating}</span>
-          </div>
-          <button
-            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors duration-300 ${
-              darkMode
-                ? "bg-indigo-500 hover:bg-indigo-400 text-white"
-                : "bg-indigo-600 hover:bg-indigo-700 text-white"
-            }`}
-          >
-            View Details
-          </button>
+        <div className="flex items-center mt-2 text-sm">
+          <Users className="w-4 h-4 mr-2 text-green-500" />
+          <span>Ages: {camp.ageRange}</span>
         </div>
+      </div>
+
+      {/* Informational List of Dates */}
+      <div className="p-4 border-t border-b">
+        <div className="flex items-center text-sm font-medium mb-2">
+          <Calendar className="w-4 h-4 mr-2 text-purple-500" />
+          <span>Available Dates:</span>
+        </div>
+        <ul className="space-y-1 text-xs">
+          {camp.sessions.map((session) => (
+            <li
+              key={session.campId}
+              className={`pl-4 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+            >
+              {formatDateRange(session)}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Footer with Price Range */}
+      <div className="flex justify-between items-center p-4">
+        <div className="flex items-center font-bold text-lg">
+          <DollarSign className="w-5 h-5 mr-2 text-yellow-500" />
+          <span>{getPriceDisplay()}</span>
+        </div>
+        <span className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+          View Details
+        </span>
       </div>
     </div>
   );

@@ -1,15 +1,15 @@
-import type { Camp } from "@/types/Camp";
+import type { GroupedCamp } from "@/utils/campUtils";
 import React, { useRef } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import CampCard from "./CampCard";
 
 interface CampListProps {
-  camps: Camp[];
+  groupedCamps: GroupedCamp[];
   darkMode: boolean;
-  onCardClick: (camp: Camp) => void;
+  onCardClick: (camp: GroupedCamp) => void;
 }
 
-function CampList({ camps, darkMode, onCardClick }: CampListProps) {
+function CampList({ groupedCamps, darkMode, onCardClick }: CampListProps) {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -21,71 +21,56 @@ function CampList({ camps, darkMode, onCardClick }: CampListProps) {
     });
   };
 
-  if (camps.length === 0) {
+  if (groupedCamps.length === 0) {
     return (
-      <p
-        className={`text-center text-lg sm:text-xl py-10 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
-      >
-        No camps found matching your criteria. Try adjusting your filters!
-      </p>
+      <div className="text-center py-10">
+        <p
+          className={`text-center text-lg sm:text-xl py-10 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+        >
+          No camps found matching your criteria. Try adjusting your filters!
+        </p>
+      </div>
     );
   }
 
   return (
-    <div className="my-8 md:my-12">
-      <h2
-        className={`text-2xl sm:text-3xl font-bold mb-6 text-center ${
-          darkMode ? "text-white" : "text-gray-900"
-        }`}
+    <div className="relative container mx-auto px-4 py-8">
+      <div
+        ref={scrollContainerRef}
+        className="flex overflow-x-auto space-x-6 py-4 scrollbar-hide"
       >
-        Featured Summer Camps
-      </h2>
-
-      {/* 1) outer wrapper allows overflow-visible so arrows can sit outside */}
-      <div className="relative w-full overflow-visible">
-        {/* 2) left arrow, pulled outside by 3rem */}
-        <button
-          onClick={() => scroll("left")}
-          aria-label="Scroll left"
-          className={`absolute -left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-            darkMode
-              ? "bg-gray-700 hover:bg-gray-600 text-white"
-              : "bg-gray-200 hover:bg-gray-300 text-gray-700"
-          } shadow-md`}
-        >
-          <ArrowLeftCircle size={30} />
-        </button>
-
-        {/* 3) scrollable list with 3rem padding on both sides */}
-        <div
-          ref={scrollContainerRef}
-          className={`flex space-x-6 overflow-x-auto pb-4 px-12 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent ${
-            darkMode ? "scrollbar-thumb-gray-600" : "scrollbar-thumb-gray-400"
-          }`}
-        >
-          {camps.map((camp) => (
-            <CampCard
-              key={camp.id}
-              camp={camp}
-              darkMode={darkMode}
-              onClick={onCardClick}
-            />
-          ))}
-        </div>
-
-        {/* 4) right arrow, also outside by 3rem */}
-        <button
-          onClick={() => scroll("right")}
-          aria-label="Scroll right"
-          className={`absolute -right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-            darkMode
-              ? "bg-gray-700 hover:bg-gray-600 text-white"
-              : "bg-gray-200 hover:bg-gray-300 text-gray-700"
-          } shadow-md`}
-        >
-          <ArrowRightCircle size={30} />
-        </button>
+        {groupedCamps.map((camp) => (
+          <CampCard
+            key={camp.name}
+            camp={camp}
+            darkMode={darkMode}
+            onClick={() => onCardClick(camp)}
+          />
+        ))}
       </div>
+      {/* Scroll Arrows */}
+      <button
+        onClick={() => scroll("left")}
+        aria-label="Scroll left"
+        className={`absolute -left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
+          darkMode
+            ? "bg-gray-700 hover:bg-gray-600 text-white"
+            : "bg-white hover:bg-gray-200 text-gray-700"
+        } shadow-md`}
+      >
+        <ArrowLeftCircle className="w-8 h-8" />
+      </button>
+      <button
+        onClick={() => scroll("right")}
+        aria-label="Scroll right"
+        className={`absolute -right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
+          darkMode
+            ? "bg-gray-700 hover:bg-gray-600 text-white"
+            : "bg-white hover:bg-gray-200 text-gray-700"
+        } shadow-md`}
+      >
+        <ArrowRightCircle className="w-8 h-8" />
+      </button>
     </div>
   );
 }
