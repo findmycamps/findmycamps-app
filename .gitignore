@@ -12,8 +12,6 @@
 
 # Utility Scripts
 runSeed.ts
-seedFirestore.ts
-campdata.json
 
 # testing
 /coverage
