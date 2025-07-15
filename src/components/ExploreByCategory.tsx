@@ -1,5 +1,4 @@
 import React from "react";
-import { Compass, Sun, Palette, Cpu, Leaf, BookOpen } from "lucide-react";
 import { CATEGORIES_WITH_ICONS } from "../data/mockCamps";
 
 interface ExploreByCategoryProps {

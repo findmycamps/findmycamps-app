@@ -1,0 +1,3554 @@
+[
+  {
+    "campId": "1",
+    "createdBy": "admin",
+    "name": "Bike Camps: Full and half day",
+    "description": "A coed day camp for ages 1-12, focusing on cycling and sports training.",
+    "category": "Sports",
+    "tags": ["Cycling", "Sports", "Instructional", "Training"],
+    "location": {
+      "address": "1031 Lucas Ave",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "1 - 12",
+    "price": 565,
+    "rating": 0,
+    "camplink": "https://pedalheads.com/en/camp?region=1&cities=1014&seasons=0&ph_search=true#camp-list",
+    "savesCount": 0
+  },
+  {
+    "campId": "2",
+    "createdBy": "admin",
+    "name": "Bike Camps: Full and half day",
+    "description": "A coed day camp for ages 1-12, focusing on cycling and sports training.",
+    "category": "Sports",
+    "tags": ["Cycling", "Sports", "Instructional", "Training"],
+    "location": {
+      "address": "301 Zealous Crescent",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "1 - 12",
+    "price": 565,
+    "rating": 0,
+    "camplink": "https://pedalheads.com/en/camp?region=1&cities=1014&seasons=0&ph_search=true#camp-list",
+    "savesCount": 0
+  },
+  {
+    "campId": "3",
+    "createdBy": "admin",
+    "name": "Bike Camps: Full and half day",
+    "description": "A coed day camp for ages 1-12, focusing on cycling and sports training.",
+    "category": "Sports",
+    "tags": ["Cycling", "Sports", "Instructional", "Training"],
+    "location": {
+      "address": "1525 Rowan St",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "1 - 12",
+    "price": 565,
+    "rating": 0,
+    "camplink": "https://pedalheads.com/en/camp?region=1&cities=1014&seasons=0&ph_search=true#camp-list",
+    "savesCount": 0
+  },
+  {
+    "campId": "4",
+    "createdBy": "admin",
+    "name": "Bike Camps: Full and half day",
+    "description": "A coed day camp for ages 1-12, focusing on cycling and sports training.",
+    "category": "Sports",
+    "tags": ["Cycling", "Sports", "Instructional", "Training"],
+    "location": {
+      "address": "2290 Musgrave St.",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "1 - 12",
+    "price": 565,
+    "rating": 0,
+    "camplink": "https://pedalheads.com/en/camp?region=1&cities=1014&seasons=0&ph_search=true#camp-list",
+    "savesCount": 0
+  },
+  {
+    "campId": "5",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "6",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "7",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "8",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "9",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "10",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "11",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "12",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "13",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "14",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "15",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "16",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "17",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "18",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "19",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "20",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "21",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "22",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "23",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1379 Esquimalt Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "24",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "25",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "1089 Langford Parkway",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "26",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2736 Fernwood Road",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-07-04T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/victoria/",
+    "savesCount": 0
+  },
+  {
+    "campId": "27",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "28",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "29",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "30",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "31",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Architects Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "32",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Masterminds Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "33",
+    "createdBy": "admin",
+    "name": "Camp STEAM: LEGO Builders Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and LEGO.",
+    "category": "STEAM",
+    "tags": ["STEAM", "LEGO"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 255,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "34",
+    "createdBy": "admin",
+    "name": "Camp STEAM: Minecraft Innovators Theme",
+    "description": "A coed day camp for ages 5-14, focusing on STEAM and Minecraft.",
+    "category": "STEAM",
+    "tags": ["STEAM", "Minecraft"],
+    "location": {
+      "address": "2410 Malaview Avenue",
+      "city": "Sidney",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-06-30T00:00:00.000Z",
+      "endDate": "2025-07-04T00:00:00.000Z"
+    },
+    "ageRange": "5 - 14",
+    "price": 205,
+    "rating": 0,
+    "camplink": "https://campsteam.ca/summer-camps/sidney/",
+    "savesCount": 0
+  },
+  {
+    "campId": "35",
+    "createdBy": "admin",
+    "name": "Roots Camp",
+    "description": "An overnight coed camp for youth (grades 8-10) focusing on self-awareness, communication, leadership, and co-operation in a wilderness setting.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Co-operation", "Communication"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-13T00:00:00.000Z",
+      "endDate": "2025-07-19T00:00:00.000Z"
+    },
+    "ageRange": "14 - 17",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "36",
+    "createdBy": "admin",
+    "name": "Roots Camp",
+    "description": "An overnight coed camp for youth (grades 8-10) focusing on self-awareness, communication, leadership, and co-operation in a wilderness setting.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Co-operation", "Communication"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-20T00:00:00.000Z",
+      "endDate": "2025-07-26T00:00:00.000Z"
+    },
+    "ageRange": "14 - 17",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "37",
+    "createdBy": "admin",
+    "name": "Roots Camp",
+    "description": "An overnight coed camp for youth (grades 8-10) focusing on self-awareness, communication, leadership, and co-operation in a wilderness setting.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Co-operation", "Communication"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-10T00:00:00.000Z",
+      "endDate": "2025-08-16T00:00:00.000Z"
+    },
+    "ageRange": "14 - 17",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "38",
+    "createdBy": "admin",
+    "name": "Roots Camp",
+    "description": "An introductory overnight coed camp for older youth (grades 9-11) new to The YES, focusing on leadership and community building.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Co-operation", "Communication"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-17T00:00:00.000Z",
+      "endDate": "2025-08-23T00:00:00.000Z"
+    },
+    "ageRange": "14 - 17",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "39",
+    "createdBy": "admin",
+    "name": "Pathways Camp",
+    "description": "An advanced overnight coed camp for returning participants (grades 10-12) to expand their leadership and team-building skills.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Team-building", "Self-awareness"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-27T00:00:00.000Z",
+      "endDate": "2025-08-02T00:00:00.000Z"
+    },
+    "ageRange": "16 - 18",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "40",
+    "createdBy": "admin",
+    "name": "Pathways Camp",
+    "description": "An advanced overnight coed camp for returning participants (grades 10-12) to expand their leadership and team-building skills.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Team-building", "Self-awareness"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-03T00:00:00.000Z",
+      "endDate": "2025-08-09T00:00:00.000Z"
+    },
+    "ageRange": "16 - 18",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "41",
+    "createdBy": "admin",
+    "name": "Pathways Camp",
+    "description": "An advanced overnight coed camp for returning participants (grades 10-12) to expand their leadership and team-building skills.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Team-building", "Self-awareness"],
+    "location": {
+      "address": "8885 Lakeview Park Rd",
+      "city": "Lake Cowichan",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-06T00:00:00.000Z",
+      "endDate": "2025-07-12T00:00:00.000Z"
+    },
+    "ageRange": "16 - 18",
+    "price": 1025,
+    "rating": 0,
+    "camplink": "https://www.theyes.ca/summer-camp",
+    "savesCount": 0
+  },
+  {
+    "campId": "42",
+    "createdBy": "admin",
+    "name": "Byte Camp: Python Coding Level 1",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through Python coding.",
+    "category": "Technology",
+    "tags": ["Coding", "Technology", "STEM", "Python"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "11 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "43",
+    "createdBy": "admin",
+    "name": "Byte Camp: Introduction to Coding",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, with an introduction to coding concepts.",
+    "category": "Technology",
+    "tags": ["Coding", "Technology", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "9 - 12",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "44",
+    "createdBy": "admin",
+    "name": "Byte Camp: Graphic Design & Printing",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through graphic design and printing.",
+    "category": "Technology",
+    "tags": ["Graphic Design", "Technology", "Arts"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "11 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "45",
+    "createdBy": "admin",
+    "name": "Byte Camp: 3D Animation",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through 3D animation.",
+    "category": "Technology",
+    "tags": ["Animation", "Technology", "Arts", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "11 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "46",
+    "createdBy": "admin",
+    "name": "Byte Camp: 2D Animation on Tablet",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through 2D animation on tablets.",
+    "category": "Technology",
+    "tags": ["Animation", "Technology", "Arts"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "9 - 12",
+    "price": 340,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "47",
+    "createdBy": "admin",
+    "name": "Byte Camp: 2D Video Game Design",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through 2D video game design.",
+    "category": "Technology",
+    "tags": ["Game Design", "Technology", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "11 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "48",
+    "createdBy": "admin",
+    "name": "Byte Camp: 3D Printing",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through 3D printing.",
+    "category": "Technology",
+    "tags": ["3D Printing", "Technology", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "11 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "49",
+    "createdBy": "admin",
+    "name": "Byte Camp: Claymation Movie Production",
+    "description": "A camp focused on changing how kids interact with technology to make them more creative, productive, and confident, specifically through Claymation movie production.",
+    "category": "Technology",
+    "tags": ["Animation", "Filmmaking", "Arts"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "9 - 12",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "50",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball",
+    "description": "A basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for 2-on-2, 3-on-3, and 5-on-5 team play. Includes a T-shirt.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "8 - 14",
+    "price": 201.6,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "51",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball Half Day Camp",
+    "description": "A half-day basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for team play.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "10 - 14",
+    "price": 124,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "52",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball Half Day Camp",
+    "description": "A half-day basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for team play.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "6 - 9",
+    "price": 124,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "53",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball",
+    "description": "A basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for 2-on-2, 3-on-3, and 5-on-5 team play. Includes a T-shirt.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "8 - 14",
+    "price": 252,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "54",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball Half Day Camp",
+    "description": "A half-day basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for team play.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "10 - 14",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "55",
+    "createdBy": "admin",
+    "name": "Eli Pasquale Basketball Half Day Camp",
+    "description": "A half-day basketball program designed to improve 1-on-1 skills and develop offensive and defensive skills for team play.",
+    "category": "Sports",
+    "tags": ["Basketball", "Sports", "Instructional"],
+    "location": {
+      "address": "Central Park - Basketball Court",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "6 - 9",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "56",
+    "createdBy": "admin",
+    "name": "Jr. Space Engineers and LEGO",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun.",
+    "category": "STEM",
+    "tags": ["Engineering", "LEGO", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 7",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "57",
+    "createdBy": "admin",
+    "name": "Dungeons & Dragons - The Architect",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, with a Dungeons & Dragons theme.",
+    "category": "STEM",
+    "tags": ["STEM", "Creative"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "8 - 12",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "58",
+    "createdBy": "admin",
+    "name": "Rescue Robots with Lego EV3s",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, specifically with Lego EV3 robots.",
+    "category": "STEM",
+    "tags": ["Robotics", "LEGO", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "8 - 12",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "59",
+    "createdBy": "admin",
+    "name": "Jr. Minecraft - Amusement Park",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, with a Minecraft Amusement Park theme.",
+    "category": "STEM",
+    "tags": ["Minecraft", "Gaming", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "6 - 8",
+    "price": 292,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "60",
+    "createdBy": "admin",
+    "name": "Jr. Minecraft - Traveling Into the Future",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, with a Minecraft theme of traveling into the future.",
+    "category": "STEM",
+    "tags": ["Minecraft", "Gaming", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "6 - 8",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "61",
+    "createdBy": "admin",
+    "name": "Minecraft - Amusement Park",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, with a Minecraft Amusement Park theme.",
+    "category": "STEM",
+    "tags": ["Minecraft", "Gaming", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "8 - 12",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "62",
+    "createdBy": "admin",
+    "name": "Minecraft - Minigames",
+    "description": "Introduces kids to STEM education through engaging, hands-on learning projects and activities focusing on fun, with a Minecraft Minigames theme.",
+    "category": "STEM",
+    "tags": ["Minecraft", "Gaming", "STEM"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Lower Auditorium",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "8 - 12",
+    "price": 365,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "63",
+    "createdBy": "admin",
+    "name": "Evolve Skate and Scooter Camp",
+    "description": "A camp focused on improving campers' fundamental physical skills like balance and coordination, while finding their style on their board.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Scootering", "Action Sports"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "6 - 14",
+    "price": 295,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "64",
+    "createdBy": "admin",
+    "name": "Evolve Skate and Scooter Camp",
+    "description": "A camp focused on improving campers' fundamental physical skills like balance and coordination, while finding their style on their board.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Scootering", "Action Sports"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "6 - 14",
+    "price": 236,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "65",
+    "createdBy": "admin",
+    "name": "Evolve Skate and Scooter Camp",
+    "description": "A camp focused on improving campers' fundamental physical skills like balance and coordination, while finding their style on their board.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Scootering", "Action Sports"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "6 - 14",
+    "price": 295,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "66",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "67",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "68",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "69",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "70",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "71",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "72",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "73",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "74",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 24,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "75",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 24,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "76",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "77",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "78",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "79",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "80",
+    "createdBy": "admin",
+    "name": "Pre-Camp Care",
+    "description": "Extended care for campers, providing supervision before the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "81",
+    "createdBy": "admin",
+    "name": "Post-Camp Care",
+    "description": "Extended care for campers, providing supervision after the main camp activities.",
+    "category": "Support",
+    "tags": ["Childcare"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "5 - 12",
+    "price": 30,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "82",
+    "createdBy": "admin",
+    "name": "ICA Adventurers Day Camp",
+    "description": "A camp designed for children new to Canada to explore their new home in a welcoming and supportive group. Registration is through the ICA.",
+    "category": "Cultural",
+    "tags": ["Newcomers", "Cultural", "Adventure"],
+    "location": {
+      "address": "Beacon Hill Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "6 - 11",
+    "price": 200,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "83",
+    "createdBy": "admin",
+    "name": "ICA Explorers Day Camp",
+    "description": "A camp designed for children new to Canada to explore their new home in a welcoming and supportive group. Registration is through the ICA.",
+    "category": "Cultural",
+    "tags": ["Newcomers", "Cultural", "Exploration"],
+    "location": {
+      "address": "Beacon Hill Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "9 - 14",
+    "price": 200,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "84",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Mary's Farm, Sidney Spit and Driving Range",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes visits to Mary's Farm, Sidney Spit, and a driving range.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "85",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: River Tubing, Disc Golf and VR",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes river tubing, disc golf, and VR experiences.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "86",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Nerf Battle, Dragon Boating and Malahat Skywalk",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes a Nerf battle, dragon boating, and a visit to Malahat Skywalk.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "87",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Arcade, Beach BBQ and Kayaking",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes arcade games, a beach BBQ, and kayaking.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-09T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 260,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "88",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Bowling, Rock Climbing and Paddle Boarding",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes bowling, rock climbing, and paddle boarding.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "89",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Laser Tag, Hiking and Board Game Cafe",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes laser tag, hiking, and a board game cafe.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "90",
+    "createdBy": "admin",
+    "name": "Jetin' Extreme: Wildplay, Axe Throwing and Mini-Golf",
+    "description": "A thrilling adventure camp that jets around Victoria in a camp bus, with each week offering a new plan and adventure. Activities include skimboarding, go-karting, rock climbing, and paintball. This session includes Wildplay, axe throwing, and mini-golf.",
+    "category": "Adventure",
+    "tags": ["Adventure", "Multi-Sport", "Exploration"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "9 - 13",
+    "price": 325,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "91",
+    "createdBy": "admin",
+    "name": "Learn to Lead",
+    "description": "A one-week program teaching the fundamentals of leading kids' games and activities, including basic program planning, group management, and safety skills.",
+    "category": "Leadership",
+    "tags": ["Leadership", "Youth Development"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "11 - 15",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "92",
+    "createdBy": "admin",
+    "name": "My First Summer Camp",
+    "description": "A first-time camp experience for young campers to play, learn, and explore with fun leaders, including outdoor creative play, songs, and crafts.",
+    "category": "General",
+    "tags": ["Early Childhood", "Play"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Brereton Room",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "3 - 5",
+    "price": 125,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "93",
+    "createdBy": "admin",
+    "name": "My First Summer Camp",
+    "description": "A first-time camp experience for young campers to play, learn, and explore with fun leaders, including outdoor creative play, songs, and crafts.",
+    "category": "General",
+    "tags": ["Early Childhood", "Play"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Brereton Room",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "3 - 5",
+    "price": 125,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "94",
+    "createdBy": "admin",
+    "name": "My First Summer Camp",
+    "description": "A first-time camp experience for young campers to play, learn, and explore with fun leaders, including outdoor creative play, songs, and crafts.",
+    "category": "General",
+    "tags": ["Early Childhood", "Play"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Brereton Room",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "3 - 5",
+    "price": 125,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "95",
+    "createdBy": "admin",
+    "name": "Playground Program: Avengers",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Avengers\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "96",
+    "createdBy": "admin",
+    "name": "Playground Program: Superheroes 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Superheroes\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "97",
+    "createdBy": "admin",
+    "name": "Playground Program: Superheroes 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Superheroes\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "98",
+    "createdBy": "admin",
+    "name": "Playground Program: Lego Ninjago 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Lego Ninjago\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "99",
+    "createdBy": "admin",
+    "name": "Playground Program: Lego Ninjago 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Lego Ninjago\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "100",
+    "createdBy": "admin",
+    "name": "Playground Program: Ninja Academy",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Ninja Academy\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "101",
+    "createdBy": "admin",
+    "name": "Playground Program: Magic and Mystery 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Magic and Mystery\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "102",
+    "createdBy": "admin",
+    "name": "Playground Program: Magic and Mystery 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Magic and Mystery\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "103",
+    "createdBy": "admin",
+    "name": "Playground Program: Witchcraft and Wizardry",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Witchcraft and Wizardry\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "104",
+    "createdBy": "admin",
+    "name": "Playground Program: Water Carnival",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Water Carnival\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "105",
+    "createdBy": "admin",
+    "name": "Playground Program: Water Carnival 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Water Carnival\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "106",
+    "createdBy": "admin",
+    "name": "Playground Program: Water Carnival 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Water Carnival\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "107",
+    "createdBy": "admin",
+    "name": "Playground Program: Adventurous Science 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Adventurous Science\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 156,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "108",
+    "createdBy": "admin",
+    "name": "Playground Program: Adventurous Science 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Adventurous Science\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 156,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "109",
+    "createdBy": "admin",
+    "name": "Playground Program: Space Race",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Space Race\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 156,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "110",
+    "createdBy": "admin",
+    "name": "Playground Program: Pokemon Masters",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Pokemon Masters\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "111",
+    "createdBy": "admin",
+    "name": "Playground Program: Pokemon Trainers 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Pokemon Trainers\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "112",
+    "createdBy": "admin",
+    "name": "Playground Program: Pokemon Trainers 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Pokemon Trainers\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "113",
+    "createdBy": "admin",
+    "name": "Playground Program: Groovin and Movin",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Groovin and Movin\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "114",
+    "createdBy": "admin",
+    "name": "Playground Program: Music Quest 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Music Quest\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "115",
+    "createdBy": "admin",
+    "name": "Playground Program: Music Quest 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Music Quest\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "116",
+    "createdBy": "admin",
+    "name": "Playground Program: Survivor Series",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Survivor Series\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "8 - 11",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "117",
+    "createdBy": "admin",
+    "name": "Playground Program: Wild Wild West 1",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Wild Wild West\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "118",
+    "createdBy": "admin",
+    "name": "Playground Program: Wild Wild West 2",
+    "description": "A fun, safe, and affordable summer camp experience packed with crafts, exciting games, and plenty of free play, with a focus on \"Wild Wild West\" theme.",
+    "category": "General",
+    "tags": ["Play", "Crafts", "Games"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "5 - 8",
+    "price": 195,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "119",
+    "createdBy": "admin",
+    "name": "RSI 10 Sports Camp",
+    "description": "A camp designed to give children a positive first interaction with 10 sports, including hockey, tennis, soccer, volleyball, baseball, rugby, lacrosse, golf, basketball, and football. Skills are taught in a safe, structured environment that focuses on building self-esteem.",
+    "category": "Sports",
+    "tags": ["Multi-Sport", "Sports", "Skill Development"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Central Park - Soccer Field beside the Crystal Pool",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "120",
+    "createdBy": "admin",
+    "name": "RSI Racket Sports Camp",
+    "description": "A camp designed to give children a positive first interaction with racket sports, focusing on building self-esteem and skill development.",
+    "category": "Sports",
+    "tags": ["Racket Sports", "Sports", "Skill Development"],
+    "location": {
+      "address": "Central Park - Tennis All",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "121",
+    "createdBy": "admin",
+    "name": "RSI Racket Sports Camp",
+    "description": "A camp designed to give children a positive first interaction with racket sports, focusing on building self-esteem and skill development.",
+    "category": "Sports",
+    "tags": ["Racket Sports", "Sports", "Skill Development"],
+    "location": {
+      "address": "Central Park - Tennis All",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "122",
+    "createdBy": "admin",
+    "name": "RISE Flag Football Camp",
+    "description": "A youth flag football experience for boys and girls, powered by Under Armour, focusing on fun, competition, and football skills to build confidence and leadership.",
+    "category": "Sports",
+    "tags": ["Football", "Flag Football", "Sports", "Leadership"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "9 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "123",
+    "createdBy": "admin",
+    "name": "RISE Flag Football Half Day Camp",
+    "description": "A youth flag football experience for boys and girls, powered by Under Armour, focusing on fun, competition, and football skills to build confidence and leadership. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Football", "Flag Football", "Sports", "Leadership"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "9 - 14",
+    "price": 225,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "124",
+    "createdBy": "admin",
+    "name": "RISE Flag Football Camp",
+    "description": "A youth flag football experience for boys and girls, powered by Under Armour, focusing on fun, competition, and football skills to build confidence and leadership.",
+    "category": "Sports",
+    "tags": ["Football", "Flag Football", "Sports", "Leadership"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "9 - 14",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "125",
+    "createdBy": "admin",
+    "name": "RISE Flag Football Half Day Camp",
+    "description": "A youth flag football experience for boys and girls, powered by Under Armour, focusing on fun, competition, and football skills to build confidence and leadership. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Football", "Flag Football", "Sports", "Leadership"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "9 - 14",
+    "price": 225,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "126",
+    "createdBy": "admin",
+    "name": "Roller Rhythm Skating Camp",
+    "description": "Discover Roller Sports Canada's acclaimed Roll Right quad and inline skating program, mastering foundational skills for roller derby, roller dance, park skating, and more. Gear is provided; just bring a helmet!",
+    "category": "Sports",
+    "tags": ["Skating", "Roller Sports", "Recreational"],
+    "location": {
+      "address": "Save on Foods Memorial Centre - SOFMC - Arena Surface",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 338,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "127",
+    "createdBy": "admin",
+    "name": "Roller Rhythm Skating Camp",
+    "description": "Discover Roller Sports Canada's acclaimed Roll Right quad and inline skating program, mastering foundational skills for roller derby, roller dance, park skating, and more. Gear is provided; just bring a helmet!",
+    "category": "Sports",
+    "tags": ["Skating", "Roller Sports", "Recreational"],
+    "location": {
+      "address": "Save on Foods Memorial Centre - SOFMC - Arena Surface",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 338,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "128",
+    "createdBy": "admin",
+    "name": "Roller Rhythm Skating Camp",
+    "description": "Discover Roller Sports Canada's acclaimed Roll Right quad and inline skating program, mastering foundational skills for roller derby, roller dance, park skating, and more. Gear is provided; just bring a helmet!",
+    "category": "Sports",
+    "tags": ["Skating", "Roller Sports", "Recreational"],
+    "location": {
+      "address": "Save on Foods Memorial Centre - SOFMC - Arena Surface",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 338,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "129",
+    "createdBy": "admin",
+    "name": "Sensational Seas Half Day Camp",
+    "description": "Join the Seaquaria Ocean Education team for their Sensational Seas Camp! Spend your days learning about colourful algae, mysterious marine invertebrates, and ocean ecosystems. Campers will get opportunities to meet starfish, sea slugs, crabs, and more!",
+    "category": "Science",
+    "tags": ["Ocean Education", "Marine Biology", "Nature"],
+    "location": {
+      "address": "Beacon Hill Park - Sports Hut",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "6 - 10",
+    "price": 200,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "130",
+    "createdBy": "admin",
+    "name": "Shredder Skateboard Camp",
+    "description": "Whether you're looking to land your first trick or hone your existing skills, this camp is for you! Led by qualified instructors, it includes individual assessment, demonstrations, and one-on-one instruction. Helmets are mandatory, and lender boards are available.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Action Sports", "Instructional"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "131",
+    "createdBy": "admin",
+    "name": "Shredder Skateboard Camp",
+    "description": "Whether you're looking to land your first trick or hone your existing skills, this camp is for you! Led by qualified instructors, it includes individual assessment, demonstrations, and one-on-one instruction. Helmets are mandatory, and lender boards are available.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Action Sports", "Instructional"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "132",
+    "createdBy": "admin",
+    "name": "Shredder Skateboard Camp",
+    "description": "Whether you're looking to land your first trick or hone your existing skills, this camp is for you! Led by qualified instructors, it includes individual assessment, demonstrations, and one-on-one instruction. Helmets are mandatory, and lender boards are available.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Action Sports", "Instructional"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "133",
+    "createdBy": "admin",
+    "name": "Shredder Skateboard Camp",
+    "description": "Whether you're looking to land your first trick or hone your existing skills, this camp is for you! Led by qualified instructors, it includes individual assessment, demonstrations, and one-on-one instruction. Helmets are mandatory, and lender boards are available.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Action Sports", "Instructional"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "134",
+    "createdBy": "admin",
+    "name": "Girls and LGBTQIA2S+ Shredder Skateboard Camp",
+    "description": "Whether you're looking to land your first trick or hone your existing skills, this camp is for you! Led by qualified instructors, it includes individual assessment, demonstrations, and one-on-one instruction. Helmets are mandatory, and lender boards are available.",
+    "category": "Sports",
+    "tags": ["Skateboarding", "Action Sports", "Instructional", "Inclusion"],
+    "location": {
+      "address": "Topaz Park - Skateboard Park",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "7 - 12",
+    "price": 300,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "135",
+    "createdBy": "admin",
+    "name": "Soccertron Half Day Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "10 - 14",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "136",
+    "createdBy": "admin",
+    "name": "Soccertron Half Day Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson South (Main) Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "6 - 9",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "137",
+    "createdBy": "admin",
+    "name": "Soccertron Summer Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "8 - 14",
+    "price": 252,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "138",
+    "createdBy": "admin",
+    "name": "Soccertron Half Day Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "10 - 14",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "139",
+    "createdBy": "admin",
+    "name": "Soccertron Half Day Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility. This is a half-day session.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson South (Main) Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "6 - 9",
+    "price": 155,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "140",
+    "createdBy": "admin",
+    "name": "Soccertron Summer Camp",
+    "description": "A community soccer program focusing on skill development in a safe and fun environment, fostering sportsmanship and promoting social responsibility.",
+    "category": "Sports",
+    "tags": ["Soccer", "Sports", "Skill Development"],
+    "location": {
+      "address": "Topaz Park - Finlayson Main Field Soccer",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "8 - 14",
+    "price": 252,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "141",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "142",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "143",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "144",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "145",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 212,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "146",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "147",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "148",
+    "createdBy": "admin",
+    "name": "Swim 'n' Splash",
+    "description": "A summer combo camp with swim lessons, games, activities, and exclusive use of the giant green waterslide. Fun swims included.",
+    "category": "Aquatics",
+    "tags": ["Swimming", "Games", "Water Activities"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 265,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "149",
+    "createdBy": "admin",
+    "name": "Saysutshun Camping Adventure",
+    "description": "Teen camping adventure with cycling, paddle boarding, and hiking. Transportation provided by recreation bus.",
+    "category": "Adventure",
+    "tags": ["Camping", "Cycling", "Paddle Boarding", "Hiking"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Recreation Bus",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-24T00:00:00.000Z"
+    },
+    "ageRange": "11 - 15",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "150",
+    "createdBy": "admin",
+    "name": "Salt Spring - Ruckle Park Camping",
+    "description": "Teen camping adventure with kayaking, paddle boarding, and a visit to Ganges. Transportation provided by recreation bus.",
+    "category": "Adventure",
+    "tags": ["Camping", "Kayaking", "Paddle Boarding"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre - Recreation Bus",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-21T00:00:00.000Z"
+    },
+    "ageRange": "11 - 15",
+    "price": 395,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "151",
+    "createdBy": "admin",
+    "name": "Teen Outdoor Jr. Guides",
+    "description": "Outdoor leadership and adventure skills for teens.",
+    "category": "Leadership",
+    "tags": ["Outdoor", "Leadership", "Adventure"],
+    "location": {
+      "address": "Crystal Pool and Fitness Centre",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-05T00:00:00.000Z",
+      "endDate": "2025-08-08T00:00:00.000Z"
+    },
+    "ageRange": "11 - 15",
+    "price": 248,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "savesCount": 0
+  },
+  {
+    "campId": "152",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Half Day Camp",
+    "description": "A half-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-07T00:00:00.000Z",
+      "endDate": "2025-07-11T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 210,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "153",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Camp",
+    "description": "A full-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-14T00:00:00.000Z",
+      "endDate": "2025-07-18T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 390,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "154",
+    "createdBy": "admin",
+    "name": "Tennis, Soccer, and Swim Camp",
+    "description": "A multi-sport camp featuring tennis, soccer, and swimming for ages 7-10.",
+    "category": "Sports",
+    "tags": ["Tennis", "Soccer", "Swimming"],
+    "location": {
+      "address": "Central Park - Tennis All",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 275,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "155",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Half Day Camp",
+    "description": "A half-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-21T00:00:00.000Z",
+      "endDate": "2025-07-25T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 210,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "156",
+    "createdBy": "admin",
+    "name": "Serve and Smash Kids Tennis",
+    "description": "A tennis camp for kids ages 5-7, focusing on introductory tennis skills and fun.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Kids"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "5 - 7",
+    "price": 110,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "157",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Half Day Camp",
+    "description": "A half-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-07-28T00:00:00.000Z",
+      "endDate": "2025-08-01T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 210,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "158",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Camp",
+    "description": "A full-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-11T00:00:00.000Z",
+      "endDate": "2025-08-15T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 390,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "159",
+    "createdBy": "admin",
+    "name": "Tennis, Soccer, and Swim Camp",
+    "description": "A multi-sport camp featuring tennis, soccer, and swimming for ages 7-10.",
+    "category": "Sports",
+    "tags": ["Tennis", "Soccer", "Swimming"],
+    "location": {
+      "address": "Central Park - Tennis All",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 275,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "160",
+    "createdBy": "admin",
+    "name": "Serve and Smash Youth Tennis Half Day Camp",
+    "description": "A half-day tennis camp for youth, focusing on skill development, fun, and friendly competition.",
+    "category": "Sports",
+    "tags": ["Tennis", "Skill Development", "Youth"],
+    "location": {
+      "address": "Stadacona Park - Tennis #3",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-18T00:00:00.000Z",
+      "endDate": "2025-08-22T00:00:00.000Z"
+    },
+    "ageRange": "7 - 13",
+    "price": 210,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  },
+  {
+    "campId": "161",
+    "createdBy": "admin",
+    "name": "Tennis, Soccer, and Swim Camp",
+    "description": "A multi-sport camp featuring tennis, soccer, and swimming for ages 7-10.",
+    "category": "Sports",
+    "tags": ["Tennis", "Soccer", "Swimming"],
+    "location": {
+      "address": "Central Park - Tennis All",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    "dates": {
+      "startDate": "2025-08-25T00:00:00.000Z",
+      "endDate": "2025-08-29T00:00:00.000Z"
+    },
+    "ageRange": "7 - 10",
+    "price": 275,
+    "rating": 0,
+    "camplink": "https://cityofvictoria.perfectmind.com/23404/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&calendarId=2c74c409-6cfe-41e8-a7a9-db4633eda847&singleCalendarWidget=False",
+    "createdAt": "2025-07-08T14:34:00.000Z",
+    "savesCount": 0
+  }
+]

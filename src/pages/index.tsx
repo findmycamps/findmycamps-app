@@ -1,4 +1,4 @@
-import type { Camp } from "@/types/Camp";
+import type { GroupedCamp } from "@/utils/campUtils";
 import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import ImageSlideshow from "@/components/ImageSlideshow";
@@ -9,79 +9,82 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import CampProfilePage from "@/components/CampProfilePage";
-import { ALL_CAMPS_DATA } from "@/data/mockCamps";
+import { useCamps } from "@/hooks/useCamps";
+import { groupCamps } from "@/utils/campUtils";
 
 export default function HomePage() {
-  const [filteredCamps, setFilteredCamps] = useState<Camp[]>(ALL_CAMPS_DATA);
+  const { camps: allCamps, loading, error } = useCamps();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedLocation, setSelectedLocation] = useState<string>("ALL");
   const [selectedCategory, setSelectedCategory] =
     useState<string>("All Categories");
   const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [selectedCamp, setSelectedCamp] = useState<Camp | null>(null);
+  const [selectedCamp, setSelectedCamp] = useState<GroupedCamp | null>(null);
+  const [displayCamps, setDisplayCamps] = useState<GroupedCamp[]>([]);
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      document.body.classList.add("bg-gray-900");
-      document.body.classList.remove("bg-gray-100");
     } else {
       document.documentElement.classList.remove("dark");
-      document.body.classList.add("bg-gray-100");
-      document.body.classList.remove("bg-gray-900");
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode((v) => !v);
-
   useEffect(() => {
-    let camps = ALL_CAMPS_DATA;
-    if (searchTerm) {
-      camps = camps.filter(
-        (camp) =>
-          camp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          camp.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          camp.tags.some((tag) =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase()),
-          ),
+    if (loading) return;
+
+    // To feature speicifc campids use the uncomment the code below:
+    //const featuredCampIds = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    // let filteredCamps  = allCamps.filter(camp => featuredCampIds.includes(camp.campId));
+
+    let filteredCamps = [...allCamps]; //and comment this
+
+    if (selectedCategory !== "All Categories") {
+      filteredCamps = filteredCamps.filter(
+        (camp) => camp.category === selectedCategory,
       );
     }
-    if (selectedLocation !== "ALL") {
-      camps = camps.filter((camp) => camp.province === selectedLocation);
-    }
-    if (selectedCategory !== "All Categories") {
-      camps = camps.filter((camp) => camp.category === selectedCategory);
-    }
-    setFilteredCamps(camps);
-  }, [searchTerm, selectedLocation, selectedCategory]);
+    const grouped = groupCamps(filteredCamps);
+    setDisplayCamps(grouped);
+  }, [searchTerm, selectedLocation, selectedCategory, loading, allCamps]);
+
+  const handleCardClick = (camp: GroupedCamp) => {
+    setSelectedCamp(camp);
+  };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Loading camps...
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen text-red-500">
+        Error loading camps. Please try again later.
+      </div>
+    );
+  }
 
   return (
-    <div
-      className={`min-h-screen flex flex-col transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-100 text-gray-800"
-      }`}
-    >
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      {!selectedCamp && <ImageSlideshow darkMode={darkMode} />}
-
-      {selectedCamp ? (
-        <CampProfilePage
-          camp={selectedCamp}
-          onBack={() => setSelectedCamp(null)}
-          darkMode={darkMode}
-        />
-      ) : (
-        <>
-          {/* Headline & subtitle below slideshow */}
-          <div className="w-full flex flex-col items-center mt-8 mb-2 px-2">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-indigo-600 dark:text-indigo-600 mb-2">
-              Find the Perfect Summer Camp
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-center text-blue-600 dark:text-blue-600 max-w-2xl">
-              Discover top-rated camps across Canada for your child's interests.
-            </p>
-          </div>
-          <main className="container mx-auto px-4 sm:px-6 flex-grow">
+    <div className={darkMode ? "dark" : ""}>
+      <main
+        className={`font-sans antialiased ${darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-50 text-gray-800"}`}
+      >
+        {selectedCamp ? (
+          <CampProfilePage
+            camp={selectedCamp}
+            onBack={() => setSelectedCamp(null)}
+            darkMode={darkMode}
+          />
+        ) : (
+          <>
+            <Header
+              darkMode={darkMode}
+              toggleDarkMode={() => setDarkMode(!darkMode)}
+            />
+            <ImageSlideshow camps={allCamps} darkMode={darkMode} />
             <SearchBar
               onSearch={setSearchTerm}
               onLocationChange={setSelectedLocation}
@@ -93,17 +96,19 @@ export default function HomePage() {
               selectedCategory={selectedCategory}
               darkMode={darkMode}
             />
+
             <CampList
-              camps={filteredCamps}
+              groupedCamps={displayCamps}
               darkMode={darkMode}
-              onCardClick={setSelectedCamp}
+              onCardClick={handleCardClick}
             />
-          </main>
-          <HowItWorks darkMode={darkMode} />
-          <Testimonials darkMode={darkMode} />
-          <Footer darkMode={darkMode} />
-        </>
-      )}
+
+            <HowItWorks darkMode={darkMode} />
+            <Testimonials darkMode={darkMode} />
+            <Footer darkMode={darkMode} />
+          </>
+        )}
+      </main>
     </div>
   );
 }

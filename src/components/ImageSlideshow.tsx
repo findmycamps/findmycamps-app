@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { Camp } from "@/types/Camp";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 
 interface ImageSlideshowProps {
+  camps: Camp[];
   darkMode: boolean;
 }
 
