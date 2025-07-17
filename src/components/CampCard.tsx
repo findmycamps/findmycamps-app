@@ -9,13 +9,17 @@ interface CampCardProps {
 }
 
 function CampCard({ camp, darkMode, onClick }: CampCardProps) {
-  const imageUrl = camp.image || "https://placehold.co/600x400?text=FindMyCamps";
+  const imageUrl =
+    camp.image || "https://placehold.co/600x400?text=FindMyCamps";
 
   const formatDateRange = (session: CampSession) => {
-    const start = new Date(session.dates.startDate).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-    });
+    const start = new Date(session.dates.startDate).toLocaleDateString(
+      "en-US",
+      {
+        month: "short",
+        day: "numeric",
+      },
+    );
     const end = new Date(session.dates.endDate).toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
@@ -30,7 +34,9 @@ function CampCard({ camp, darkMode, onClick }: CampCardProps) {
     const prices = camp.sessions.map((s) => s.price);
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
-    return minPrice === maxPrice ? `$${minPrice}` : `$${minPrice} - $${maxPrice}`;
+    return minPrice === maxPrice
+      ? `$${minPrice}`
+      : `$${minPrice} - $${maxPrice}`;
   };
 
   return (

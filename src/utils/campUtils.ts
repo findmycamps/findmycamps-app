@@ -14,14 +14,15 @@ export interface CampSession {
   };
 }
 
-export interface GroupedCamp extends Omit<Camp, 'campId' | 'dates' | 'price' | 'location'> {
+export interface GroupedCamp
+  extends Omit<Camp, "campId" | "dates" | "price" | "location"> {
   sessions: CampSession[];
 }
 
 export function groupCamps(camps: Camp[]): GroupedCamp[] {
   const grouped = new Map<string, GroupedCamp>();
 
-  camps.forEach(camp => {
+  camps.forEach((camp) => {
     if (!camp.dates || !camp.dates.startDate || !camp.dates.endDate) {
       return;
     }
@@ -38,10 +39,11 @@ export function groupCamps(camps: Camp[]): GroupedCamp[] {
 
     const currentGroup = grouped.get(key)!;
 
-    const isDuplicate = currentGroup.sessions.some(session =>
-      session.dates.startDate.getTime() === dates.startDate.getTime() &&
-      session.dates.endDate.getTime() === dates.endDate.getTime() &&
-      session.price === price
+    const isDuplicate = currentGroup.sessions.some(
+      (session) =>
+        session.dates.startDate.getTime() === dates.startDate.getTime() &&
+        session.dates.endDate.getTime() === dates.endDate.getTime() &&
+        session.price === price,
     );
 
     if (!isDuplicate) {

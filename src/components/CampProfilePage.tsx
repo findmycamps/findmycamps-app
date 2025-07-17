@@ -15,7 +15,8 @@ interface CampProfilePageProps {
 }
 
 function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
-  const imageUrl = camp.image || "https://placehold.co/1200x600?text=FindMyCamps";
+  const imageUrl =
+    camp.image || "https://placehold.co/1200x600?text=FindMyCamps";
 
   const formatDate = (date: Date): string => {
     return new Date(date).toLocaleDateString("en-US", {
@@ -77,7 +78,7 @@ function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
                       {formatDate(session.dates.startDate)} –{" "}
                       {formatDate(session.dates.endDate)}
                     </p>
-                    
+
                     {/* Wrapped Price and Location in a flex container */}
                     <div className="flex justify-between items-center mt-2">
                       <p className="text-lg font-bold text-yellow-500">
@@ -85,7 +86,9 @@ function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
                       </p>
                       <div className="flex items-center text-sm text-gray-500 text-right">
                         <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="truncate">{session.location.address}</span>
+                        <span className="truncate">
+                          {session.location.address}
+                        </span>
                       </div>
                     </div>
                   </div>
