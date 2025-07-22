@@ -43,7 +43,10 @@ function CampCard({ camp, onClick }: CampCardProps) {
   const formatDateRange = (session: CampSession) => {
     const start = new Date(session.dates.startDate).toLocaleDateString(
       "en-US",
-      { month: "short", day: "numeric" },
+      {
+        month: "short",
+        day: "numeric",
+      },
     );
     const end = new Date(session.dates.endDate).toLocaleDateString("en-US", {
       month: "short",
