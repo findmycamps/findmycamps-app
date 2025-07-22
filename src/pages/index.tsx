@@ -35,7 +35,6 @@ export default function HomePage() {
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
-
   const handleSearch = (criteria: SearchCriteria) => {
     setSearchCriteria(criteria);
   };
@@ -57,7 +56,6 @@ export default function HomePage() {
     setArtsCamps(groupCamps(arts));
     const sports = allCamps.filter((camp) => camp.category === "Sports");
     setSportsCamps(groupCamps(sports));
-
   }, [searchCriteria, loading, allCamps]);
 
   const handleCardClick = (camp: GroupedCamp) => {
@@ -73,7 +71,9 @@ export default function HomePage() {
         {selectedCamp ? (
           <CampProfilePage
             camp={selectedCamp}
-            onBack={() => setSelectedCamp(null)} darkMode={isDarkMode}          />
+            onBack={() => setSelectedCamp(null)}
+            darkMode={isDarkMode}
+          />
         ) : (
           <>
             <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
