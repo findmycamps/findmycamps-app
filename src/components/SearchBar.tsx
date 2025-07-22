@@ -1,126 +1,149 @@
 import React, { useState } from "react";
-import { Search, MapPin, ChevronDown, ChevronUp } from "lucide-react";
-import { PROVINCES } from "../data/mockCamps";
+import { format } from "date-fns";
+import { Search, MapPin, Calendar as CalendarIcon } from "lucide-react";
 
-interface SearchBarProps {
-  onSearch: (value: string) => void;
-  onLocationChange: (provinceCode: string) => void;
-  selectedLocation: string;
-  darkMode: boolean;
+import { PROVINCES } from "../data/constants";
+import { cn } from "@/lib/utils";
+
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+export interface SearchCriteria {
+  keyword: string;
+  location: string;
+  date: Date | undefined;
 }
 
-function SearchBar({
-  onSearch,
-  onLocationChange,
-  selectedLocation,
-  darkMode,
-}: SearchBarProps) {
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const [isLocationDropdownOpen, setIsLocationDropdownOpen] =
-    useState<boolean>(false);
+interface SearchBarProps {
+  onSearch: (criteria: SearchCriteria) => void;
+}
 
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-    onSearch(e.target.value);
-  };
+function SearchBar({ onSearch }: SearchBarProps) {
+  const [keyword, setKeyword] = useState("");
+  const [location, setLocation] = useState("ALL");
+  // ✅ State updated to handle a single date
+  const [date, setDate] = useState<Date | undefined>();
+  const [activeField, setActiveField] = useState<
+    "what" | "where" | "when" | null
+  >(null);
 
-  const handleLocationSelect = (provinceCode: string) => {
-    onLocationChange(provinceCode);
-    setIsLocationDropdownOpen(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    onSearch({ keyword, location, date });
   };
 
   return (
-    <div
-      className={`p-6 rounded-xl shadow-xl my-8 md:my-12 transition-colors duration-300 ${
-        darkMode ? "bg-gray-700" : "bg-gray-50"
-      }`}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
-        <div className="md:col-span-1">
-          <label
-            htmlFor="searchCamp"
-            className={`block text-sm font-medium mb-1 ${
-              darkMode ? "text-gray-300" : "text-gray-700"
-            }`}
-          >
-            Search Camp Name or Keyword
-          </label>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search
-                className={`w-5 h-5 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
-              />
-            </div>
-            <input
-              type="text"
-              id="searchCamp"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              placeholder="e.g., 'Adventure Camp' or 'Coding'"
-              className={`w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm focus:ring-2 focus:outline-none transition-all duration-300 ${
-                darkMode
-                  ? "bg-gray-800 border-gray-600 text-white focus:ring-indigo-500 placeholder-gray-500"
-                  : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 placeholder-gray-400"
-              }`}
-            />
-          </div>
+    <section className="py-12 bg-muted/30">
+      <div className="container">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Find Your Perfect Camp
+          </h2>
+          <p className="mt-2 text-muted-foreground">
+            Discover amazing camps across Canada.
+          </p>
         </div>
-        <div className="relative md:col-span-1">
-          <label
-            htmlFor="location"
-            className={`block text-sm font-medium mb-1 ${
-              darkMode ? "text-gray-300" : "text-gray-700"
-            }`}
-          >
-            Location
-          </label>
-          <button
-            onClick={() => setIsLocationDropdownOpen(!isLocationDropdownOpen)}
-            className={`w-full flex items-center justify-between text-left px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 transition-all duration-300 ${
-              darkMode
-                ? "bg-gray-800 border-gray-600 text-white hover:border-gray-500 focus:ring-indigo-500"
-                : "bg-white border-gray-300 hover:border-gray-400 focus:ring-indigo-500 focus:border-indigo-500"
-            }`}
-          >
-            <MapPin
-              className={`w-5 h-5 mr-2 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`}
-            />
-            <span className="flex-grow">
-              {PROVINCES.find((p) => p.code === selectedLocation)?.name ||
-                "Select Province"}
-            </span>
-            {isLocationDropdownOpen ? (
-              <ChevronUp className="w-5 h-5" />
-            ) : (
-              <ChevronDown className="w-5 h-5" />
+
+        <div className="max-w-4xl mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className={cn(
+              "grid grid-cols-1 lg:grid-cols-[2fr_2fr_2.5fr_auto] bg-background shadow-lg transition-all duration-300",
+              "rounded-2xl lg:rounded-full border border-border/60 hover:shadow-xl",
+              activeField ? "ring-2 ring-primary" : "",
             )}
-          </button>
-          {isLocationDropdownOpen && (
-            <div
-              className={`absolute z-20 mt-1 w-full rounded-md shadow-lg max-h-60 overflow-auto transition-all duration-300 origin-top ${
-                darkMode
-                  ? "bg-gray-800 border border-gray-600"
-                  : "bg-white border border-gray-200"
-              }`}
-            >
-              {PROVINCES.map((province) => (
-                <div
-                  key={province.code}
-                  onClick={() => handleLocationSelect(province.code)}
-                  className={`px-4 py-3 cursor-pointer transition-colors duration-150 ${
-                    darkMode
-                      ? "text-gray-300 hover:bg-gray-700"
-                      : "text-gray-700 hover:bg-indigo-50"
-                  }`}
-                >
-                  {province.name}
-                </div>
-              ))}
+          >
+            {/* Keywords Section - Label Removed */}
+            <div className="relative flex items-center border-b lg:border-b-0 lg:border-r border-border/60">
+              <div className="p-4 lg:py-3 lg:px-6 w-full">
+                <input
+                  id="keyword-search"
+                  type="text"
+                  placeholder="Search camps, activities..."
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  className="w-full bg-transparent text-sm font-medium placeholder:text-muted-foreground focus:outline-none p-0"
+                />
+              </div>
             </div>
-          )}
+
+            {/* Location Section - Label Removed */}
+            <div className="relative flex items-center border-b lg:border-b-0 lg:border-r border-border/60">
+              <div className="p-4 lg:py-3 lg:px-6 w-full">
+                <Select
+                  value={location}
+                  onValueChange={setLocation}
+                  onOpenChange={(open) => setActiveField(open ? "where" : null)}
+                >
+                  <SelectTrigger className="w-full bg-transparent border-0 p-0 h-auto justify-start focus:ring-0 focus:ring-offset-0">
+                    <SelectValue
+                      placeholder="Select a province"
+                      className="text-sm font-medium"
+                    />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {PROVINCES.map((p) => (
+                      <SelectItem key={p.code} value={p.code}>
+                        {p.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Date Picker Section - Label Removed & Single Date Mode */}
+            <div className="relative flex items-center">
+              <Popover
+                onOpenChange={(open) => setActiveField(open ? "when" : null)}
+              >
+                <PopoverTrigger asChild>
+                  <button className="p-4 lg:py-3 lg:px-6 w-full text-left flex items-center justify-between">
+                    <span className="text-sm font-medium text-muted-foreground">
+                      {date ? format(date, "LLL d, y") : "Add a date"}
+                    </span>
+                    <CalendarIcon className="w-4 h-4 text-muted-foreground" />
+                  </button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    initialFocus
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    numberOfMonths={1}
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
+
+            {/* Search Button */}
+            <div className="p-2">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full lg:w-auto lg:h-14 lg:px-6 rounded-xl lg:rounded-full font-bold flex items-center gap-2"
+              >
+                <Search className="w-5 h-5" />
+                <span className="hidden lg:inline">Search</span>
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

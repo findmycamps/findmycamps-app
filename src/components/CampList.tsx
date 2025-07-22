@@ -1,77 +1,75 @@
 import type { GroupedCamp } from "@/utils/campUtils";
-import React, { useRef } from "react";
-import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import CampCard from "./CampCard";
 
 interface CampListProps {
+  title: string;
+  description?: string;
   groupedCamps: GroupedCamp[];
-  darkMode: boolean;
   onCardClick: (camp: GroupedCamp) => void;
+  className?: string;
+  titleAlignment?: "left" | "center";
 }
 
-function CampList({ groupedCamps, darkMode, onCardClick }: CampListProps) {
-  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollContainerRef.current) return;
-    const scrollAmount = direction === "left" ? -300 : 300;
-    scrollContainerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  };
-
+function CampList({
+  title,
+  description,
+  groupedCamps,
+  onCardClick,
+  className = "",
+  titleAlignment = "left",
+}: CampListProps) {
   if (groupedCamps.length === 0) {
-    return (
-      <div className="text-center py-10">
-        <p
-          className={`text-center text-lg sm:text-xl py-10 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
-        >
-          No camps found matching your criteria. Try adjusting your filters!
-        </p>
-      </div>
-    );
+    return null;
   }
 
+  const headerAlignmentClass = titleAlignment === "center" ? "text-center" : "";
+
   return (
-    <div className="relative container mx-auto px-4 py-8">
-      <div
-        ref={scrollContainerRef}
-        className="flex overflow-x-auto space-x-6 py-4 scrollbar-hide"
-      >
-        {groupedCamps.map((camp) => (
-          <CampCard
-            key={camp.name}
-            camp={camp}
-            darkMode={darkMode}
-            onClick={() => onCardClick(camp)}
-          />
-        ))}
+    <section className={`py-16 ${className}`}>
+      <div className="container">
+        <div className={`mb-12 ${headerAlignmentClass}`}>
+          <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+          {description && (
+            <p
+              className={`mt-4 max-w-2xl text-muted-foreground text-lg ${titleAlignment === "center" ? "mx-auto" : ""}`}
+            >
+              {description}
+            </p>
+          )}
+        </div>
+
+        <Carousel
+          opts={{
+            align: "start",
+            loop: false,
+          }}
+          className="relative"
+        >
+          <CarouselContent className="-ml-1">
+            {groupedCamps.map((camp, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-3 md:basis-1/2 lg:basis-1/4"
+              >
+                <div className="p-1">
+                  <CampCard camp={camp} onClick={() => onCardClick(camp)} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute -left-9 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute -right-11 top-1/2 -translate-y-1/2" />
+        </Carousel>
       </div>
-      {/* Scroll Arrows */}
-      <button
-        onClick={() => scroll("left")}
-        aria-label="Scroll left"
-        className={`absolute -left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-          darkMode
-            ? "bg-gray-700 hover:bg-gray-600 text-white"
-            : "bg-white hover:bg-gray-200 text-gray-700"
-        } shadow-md`}
-      >
-        <ArrowLeftCircle className="w-8 h-8" />
-      </button>
-      <button
-        onClick={() => scroll("right")}
-        aria-label="Scroll right"
-        className={`absolute -right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full transition-colors ${
-          darkMode
-            ? "bg-gray-700 hover:bg-gray-600 text-white"
-            : "bg-white hover:bg-gray-200 text-gray-700"
-        } shadow-md`}
-      >
-        <ArrowRightCircle className="w-8 h-8" />
-      </button>
-    </div>
+    </section>
   );
 }
 

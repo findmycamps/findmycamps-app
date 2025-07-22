@@ -1,6 +1,6 @@
 import type { Camp } from "@/types/Camp";
 
-// Define the structure for a session (a specific date/price combo)
+// Define the structure for a session, including its own location
 export interface CampSession {
   campId: string;
   dates: {
@@ -8,20 +8,36 @@ export interface CampSession {
     endDate: Date;
   };
   price: number;
+  location: {
+    address: string;
+    city: string;
+    province: string;
+  };
 }
 
-// Define the new structure for a grouped camp
-export interface GroupedCamp extends Omit<Camp, "campId" | "dates" | "price"> {
+// GroupedCamp no longer needs its own top-level location
+export interface GroupedCamp
+  extends Omit<Camp, "campId" | "dates" | "price" | "location"> {
   sessions: CampSession[];
 }
 
-// The grouping function
 export function groupCamps(camps: Camp[]): GroupedCamp[] {
   const grouped = new Map<string, GroupedCamp>();
 
   camps.forEach((camp) => {
-    const { campId, dates, price, ...commonDetails } = camp;
-    const key = camp.name; // Use name as the primary key for grouping
+    // Return early if essential data is missing
+    if (
+      !camp.dates ||
+      !camp.dates.startDate ||
+      !camp.dates.endDate ||
+      !camp.location
+    ) {
+      return;
+    }
+
+    // ✅ FIX 1: Capture 'location' during destructuring
+    const { campId, dates, price, location, ...commonDetails } = camp;
+    const key = camp.name;
 
     if (!grouped.has(key)) {
       grouped.set(key, {
@@ -30,12 +46,25 @@ export function groupCamps(camps: Camp[]): GroupedCamp[] {
       });
     }
 
-    // Add the specific date and price as a "session"
-    grouped.get(key)!.sessions.push({
-      campId,
-      dates,
-      price,
-    });
+    const currentGroup = grouped.get(key)!;
+
+    // Check for duplicate sessions to avoid visual clutter
+    const isDuplicate = currentGroup.sessions.some(
+      (session) =>
+        session.dates.startDate.getTime() === dates.startDate.getTime() &&
+        session.dates.endDate.getTime() === dates.endDate.getTime() &&
+        session.price === price,
+    );
+
+    if (!isDuplicate) {
+      // ✅ FIX 2: Pass the captured 'location' object into the session
+      currentGroup.sessions.push({
+        campId,
+        dates,
+        price,
+        location, // Use the real location data
+      });
+    }
   });
 
   return Array.from(grouped.values());
