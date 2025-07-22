@@ -1,77 +1,53 @@
 import React from "react";
 import { Star } from "lucide-react";
-import { TESTIMONIALS_DATA, Testimonial } from "../data/testimonials";
 
-interface TestimonialsProps {
-  darkMode: boolean;
-}
+const testimonials = [
+  {
+    quote:
+      "FindMyCamps made our summer planning a breeze! We found an amazing arts camp that our daughter absolutely loved.",
+    author: "Sarah J.",
+    location: "Vancouver, BC",
+  },
+  {
+    quote:
+      "The detailed filtering and comparison tools are a game-changer. We'll be using this every year.",
+    author: "Michael R.",
+    location: "Toronto, ON",
+  },
+  {
+    quote:
+      "I can't believe how easy it was to find a camp that fit our budget and schedule. Highly recommended!",
+    author: "Emily T.",
+    location: "Calgary, AB",
+  },
+];
 
-function Testimonials({ darkMode }: TestimonialsProps) {
+function Testimonials() {
   return (
-    <section className="py-12 md:py-16">
-      <div className="container mx-auto px-6">
-        <h2
-          className={`text-2xl sm:text-3xl font-bold mb-4 text-center ${
-            darkMode ? "text-white" : "text-gray-900"
-          }`}
-        >
-          What Parents Say
+    <section className="py-16">
+      <div className="container text-center">
+        <h2 className="text-3xl md:text-4xl font-bold">
+          What Parents Are Saying
         </h2>
-        <p
-          className={`text-center text-sm sm:text-base mb-10 md:mb-12 max-w-2xl mx-auto ${
-            darkMode ? "text-gray-400" : "text-gray-600"
-          }`}
-        >
-          Hear from parents who found amazing summer experiences for their kids.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {TESTIMONIALS_DATA.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`p-6 rounded-xl shadow-lg transition-all duration-300 ${
-                darkMode
-                  ? "bg-gray-800 text-gray-300"
-                  : "bg-white text-gray-700"
-              }`}
-            >
-              <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4 object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src = `https://placehold.co/100x100/${
-                      darkMode ? "4B5563" : "E5E7EB"
-                    }/${darkMode ? "F3F4F6" : "4B5563"}?text=??`;
-                  }}
-                />
-                <div>
-                  <h4
-                    className={`font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}
-                  >
-                    {testimonial.name}
-                  </h4>
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-4 h-4 ${
-                          i < testimonial.rating
-                            ? "text-yellow-400"
-                            : darkMode
-                              ? "text-gray-600"
-                              : "text-gray-300"
-                        }`}
-                        fill={i < testimonial.rating ? "currentColor" : "none"}
-                      />
-                    ))}
-                  </div>
-                </div>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="p-6 bg-card rounded-lg shadow-md">
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-golden-amber fill-current"
+                  />
+                ))}
               </div>
-              <p className="text-sm leading-relaxed italic">
+              <p className="text-muted-foreground italic">
                 "{testimonial.quote}"
+              </p>
+              <p className="mt-4 font-semibold text-foreground">
+                - {testimonial.author}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {testimonial.location}
               </p>
             </div>
           ))}

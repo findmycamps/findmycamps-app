@@ -1,5 +1,6 @@
 import type { Camp } from "@/types/Camp";
 
+// Define the structure for a session, including its own location
 export interface CampSession {
   campId: string;
   dates: {
@@ -14,6 +15,7 @@ export interface CampSession {
   };
 }
 
+// GroupedCamp no longer needs its own top-level location
 export interface GroupedCamp
   extends Omit<Camp, "campId" | "dates" | "price" | "location"> {
   sessions: CampSession[];
@@ -23,10 +25,17 @@ export function groupCamps(camps: Camp[]): GroupedCamp[] {
   const grouped = new Map<string, GroupedCamp>();
 
   camps.forEach((camp) => {
-    if (!camp.dates || !camp.dates.startDate || !camp.dates.endDate) {
+    // Return early if essential data is missing
+    if (
+      !camp.dates ||
+      !camp.dates.startDate ||
+      !camp.dates.endDate ||
+      !camp.location
+    ) {
       return;
     }
 
+    // ✅ FIX 1: Capture 'location' during destructuring
     const { campId, dates, price, location, ...commonDetails } = camp;
     const key = camp.name;
 
@@ -39,6 +48,7 @@ export function groupCamps(camps: Camp[]): GroupedCamp[] {
 
     const currentGroup = grouped.get(key)!;
 
+    // Check for duplicate sessions to avoid visual clutter
     const isDuplicate = currentGroup.sessions.some(
       (session) =>
         session.dates.startDate.getTime() === dates.startDate.getTime() &&
@@ -47,11 +57,12 @@ export function groupCamps(camps: Camp[]): GroupedCamp[] {
     );
 
     if (!isDuplicate) {
+      // ✅ FIX 2: Pass the captured 'location' object into the session
       currentGroup.sessions.push({
         campId,
         dates,
         price,
-        location,
+        location, // Use the real location data
       });
     }
   });

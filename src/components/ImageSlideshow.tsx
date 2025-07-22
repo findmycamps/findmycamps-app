@@ -1,89 +1,112 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { Camp } from "@/types/Camp";
-import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-interface ImageSlideshowProps {
-  camps: Camp[];
-  darkMode: boolean;
-}
-
-const SLIDESHOW_IMAGES = [
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80",
+const slides = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200&h=600&fit=crop",
+    title: "Find the Perfect Summer Camp",
+    subtitle:
+      "Discover top-rated camps across Canada for your child's interests",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&h=600&fit=crop",
+    title: "Adventure Awaits",
+    subtitle:
+      "From wilderness adventures to creative arts, find the perfect match",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&h=600&fit=crop",
+    title: "Memories That Last",
+    subtitle: "Give your child an unforgettable summer experience",
+  },
 ];
 
-function ImageSlideshow({ darkMode }: ImageSlideshowProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % SLIDESHOW_IMAGES.length);
-  }, []);
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + SLIDESHOW_IMAGES.length) % SLIDESHOW_IMAGES.length,
-    );
-  };
+const HeroSlideshow = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   return (
-    <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden shadow-lg mb-0">
-      {SLIDESHOW_IMAGES.map((src, index) => (
-        <img
-          key={src}
-          src={src}
-          alt={`Camp slideshow background ${index + 1}`}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
+    <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.onerror = null;
-            target.src = `https://placehold.co/1200x500/${
-              darkMode ? "4B5563" : "E5E7EB"
-            }/${darkMode ? "F3F4F6" : "4B5563"}?text=Error`;
-          }}
-        />
+        >
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="relative h-full flex items-center justify-center text-center px-4">
+              <div className="max-w-4xl mx-auto">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                  {slide.title}
+                </h1>
+                <p className="text-xl md:text-2xl text-white/90 mb-8">
+                  {slide.subtitle}
+                </p>
+                {/* ✅ CHANGE: Replaced with a standard <button> element */}
+                <button className="px-8 py-3 text-lg font-semibold rounded-lg bg-golden-amber hover:bg-golden-amber/90 text-primary transition-colors">
+                  Start Exploring Camps
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       ))}
+
+      {/* ✅ CHANGE: Navigation arrows are now standard <button> elements */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity duration-300 z-10"
+        aria-label="Previous slide"
+        className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 border border-white/30 text-white transition-colors"
       >
-        <ArrowLeftCircle size={24} />
+        <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity duration-300 z-10"
+        aria-label="Next slide"
+        className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 border border-white/30 text-white transition-colors"
       >
-        <ArrowRightCircle size={24} />
+        <ChevronRight className="h-6 w-6" />
       </button>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {SLIDESHOW_IMAGES.map((_, index) => (
+
+      {/* Dots indicator (already a button, no change needed here) */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? darkMode
-                  ? "bg-indigo-400"
-                  : "bg-indigo-600"
-                : darkMode
-                  ? "bg-gray-600"
-                  : "bg-gray-300"
-            } hover:bg-indigo-500`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              index === currentSlide
+                ? "bg-white"
+                : "bg-white/50 hover:bg-white/75"
+            }`}
+            onClick={() => setCurrentSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
     </div>
   );
-}
+};
 
-export default ImageSlideshow;
+export default HeroSlideshow;

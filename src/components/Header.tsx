@@ -1,59 +1,43 @@
-import React from "react";
-import { Smile, Sun, Moon, UserCircle } from "lucide-react";
+import React, { useState } from "react";
+import { Sun, Moon, AlignJustify } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
-  darkMode: boolean;
   toggleDarkMode: () => void;
+  isDarkMode: boolean;
 }
 
-function Header({ darkMode, toggleDarkMode }: HeaderProps) {
+function Header({ toggleDarkMode, isDarkMode }: HeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header
-      className={`py-4 shadow-md sticky top-0 z-50 transition-colors duration-300 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-      }`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <Smile
-            className={`w-8 h-8 ${darkMode ? "text-yellow-300" : "text-yellow-400"}`}
-          />
-          <h1 className="text-2xl font-bold tracking-tight">FindMyCamps</h1>
-        </div>
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          <button
-            onClick={toggleDarkMode}
-            className={`p-2 rounded-full transition-colors duration-300 ${
-              darkMode ? "hover:bg-gray-700" : "hover:bg-gray-100"
-            }`}
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? (
-              <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <a href="/" className="flex items-center space-x-2">
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-green-800">
+            <span className="font-bold text-lg text-primary-foreground">F</span>
+          </div>
+          <span className="font-bold text-lg text-foreground">FindMyCamps</span>
+        </a>
+
+        <nav className="hidden md:flex items-center space-x-2">
+          <Button variant="ghost" size="icon" onClick={toggleDarkMode}>
+            {isDarkMode ? (
+              <Sun className="h-5 w-5" />
             ) : (
-              <Moon className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" />
+              <Moon className="h-5 w-5" />
             )}
-          </button>
-          <button
-            className={`px-3 py-2 sm:px-4 text-sm sm:text-base rounded-lg font-semibold transition-all duration-300 ease-in-out whitespace-nowrap ${
-              darkMode
-                ? "bg-indigo-500 hover:bg-indigo-400 text-white"
-                : "bg-indigo-600 hover:bg-indigo-700 text-white"
-            } focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transform hover:scale-105`}
-          >
-            List a Camp
-          </button>
-          <button
-            className={`flex items-center px-3 py-2 sm:px-4 text-sm sm:text-base rounded-lg font-semibold transition-all duration-300 ease-in-out whitespace-nowrap ${
-              darkMode
-                ? "bg-green-500 hover:bg-green-400 text-white"
-                : "bg-green-600 hover:bg-green-700 text-white"
-            } focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transform hover:scale-105`}
-          >
-            <UserCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-            Login
-          </button>
-        </div>
+          </Button>
+          <Button variant="ghost">List a Camp</Button>
+          <Button>Login</Button>
+        </nav>
+
+        <button
+          className="md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <AlignJustify className="h-6 w-6" />
+        </button>
       </div>
     </header>
   );

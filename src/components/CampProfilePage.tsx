@@ -79,17 +79,19 @@ function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
                       {formatDate(session.dates.endDate)}
                     </p>
 
-                    {/* Wrapped Price and Location in a flex container */}
                     <div className="flex justify-between items-center mt-2">
                       <p className="text-lg font-bold text-yellow-500">
                         ${session.price}
                       </p>
-                      <div className="flex items-center text-sm text-gray-500 text-right">
-                        <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="truncate">
-                          {session.location.address}
-                        </span>
-                      </div>
+                      {/* ✅ FIX: Add optional chaining to safely access location */}
+                      {session?.location?.address && (
+                        <div className="flex items-center text-sm text-gray-500 text-right">
+                          <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span className="truncate">
+                            {session.location.address}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -97,7 +99,8 @@ function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
             </div>
 
             <div className="mt-6 space-y-4 border-t pt-6">
-              {camp.sessions.length > 0 && (
+              {/* ✅ FIX: Add optional chaining here as well for safety */}
+              {camp.sessions?.[0]?.location && (
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-blue-500" />
                   <span>

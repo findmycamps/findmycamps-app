@@ -2,4 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* add any global custom styles here */
+@layer base {
+  /* ✅ YOUR CUSTOM LIGHT THEME */
+  :root {
+    --background: 45 100% 97%; /* Cream */
+    --foreground: 180 100% 16%; /* Dark Forest Green */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 180 100% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 100% 16%;
+    --primary: 180 100% 16%; /* Forest Green */
+    --primary-foreground: 45 100% 97%;
+    --secondary: 73 32% 70%; /* Soft Lime Green */
+    --secondary-foreground: 180 100% 16%;
+    --muted: 45 100% 90%; /* Light Cream */
+    --muted-foreground: 0 0% 45%; /* Gray */
+    --accent: 73 32% 70%; /* Soft Lime Accent */
+    --accent-foreground: 180 100% 16%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 73 32% 85%;
+    --input: 73 32% 85%;
+    --ring: 180 100% 16%;
+    --radius: 0.5rem;
+    --golden-amber: 43 100% 56%;
+  }
+
+  /* ✅ YOUR CUSTOM DARK THEME */
+  .dark {
+    --background: 180 100% 4%; /* Very Dark Forest Green */
+    --foreground: 45 100% 97%; /* Cream Text */
+    --card: 180 50% 8%; /* Dark Green Cards */
+    --card-foreground: 45 100% 97%;
+    --popover: 180 100% 4%;
+    --popover-foreground: 45 100% 97%;
+    --primary: 73 32% 70%; /* Soft Lime Primary */
+    --primary-foreground: 180 100% 16%;
+    --secondary: 180 50% 12%; /* Dark Green Secondary */
+    --secondary-foreground: 45 100% 97%;
+    --muted: 180 50% 12%;
+    --muted-foreground: 45 100% 80%;
+    --accent: 180 50% 12%;
+    --accent-foreground: 45 100% 97%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 180 50% 12%;
+    --input: 180 50% 12%;
+    --ring: 73 32% 70%;
+    --golden-amber: 43 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
