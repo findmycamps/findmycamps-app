@@ -1,4 +1,6 @@
 import type { GroupedCamp } from "@/utils/campUtils";
+// ✅ Import the new SearchCriteria type
+import type { SearchCriteria } from "@/components/SearchBar";
 import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import ImageSlideshow from "@/components/ImageSlideshow";
@@ -13,16 +15,30 @@ import { groupCamps } from "@/utils/campUtils";
 
 export default function HomePage() {
   const { camps: allCamps, loading, error } = useCamps();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("ALL");
+
+  // ✅ REMOVED: Old, individual state variables
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [selectedLocation, setSelectedLocation] = useState("ALL");
+
+  // ✅ ADDED: A single state object to hold all search criteria
+  const [searchCriteria, setSearchCriteria] = useState<SearchCriteria>({
+    keyword: "",
+    location: "ALL",
+    date: undefined,
+  });
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedCamp, setSelectedCamp] = useState<GroupedCamp | null>(null);
-
   const [featuredCamps, setFeaturedCamps] = useState<GroupedCamp[]>([]);
   const [artsCamps, setArtsCamps] = useState<GroupedCamp[]>([]);
   const [sportsCamps, setSportsCamps] = useState<GroupedCamp[]>([]);
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
+
+
+  const handleSearch = (criteria: SearchCriteria) => {
+    setSearchCriteria(criteria);
+  };
 
   useEffect(() => {
     if (isDarkMode) {
@@ -41,7 +57,8 @@ export default function HomePage() {
     setArtsCamps(groupCamps(arts));
     const sports = allCamps.filter((camp) => camp.category === "Sports");
     setSportsCamps(groupCamps(sports));
-  }, [searchTerm, selectedLocation, loading, allCamps]);
+
+  }, [searchCriteria, loading, allCamps]);
 
   const handleCardClick = (camp: GroupedCamp) => {
     setSelectedCamp(camp);
@@ -56,20 +73,14 @@ export default function HomePage() {
         {selectedCamp ? (
           <CampProfilePage
             camp={selectedCamp}
-            onBack={() => setSelectedCamp(null)}
-            darkMode={false}
-          />
+            onBack={() => setSelectedCamp(null)} darkMode={isDarkMode}          />
         ) : (
           <>
             <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
             <ImageSlideshow />
-            <SearchBar
-              onSearch={setSearchTerm}
-              onLocationChange={setSelectedLocation}
-              selectedLocation={selectedLocation}
-            />
 
-            {/* ✅ This section will now be centered */}
+            <SearchBar onSearch={handleSearch} />
+
             <CampList
               title="Featured Camps"
               description="Our top picks for an unforgettable summer experience."
@@ -77,22 +88,18 @@ export default function HomePage() {
               onCardClick={handleCardClick}
               titleAlignment="center"
             />
-
-            {/* These sections will remain left-aligned by default */}
             <CampList
               title="Artistic Adventures"
               description="Unleash creativity with camps focused on painting, drama, music, and more."
               groupedCamps={artsCamps}
               onCardClick={handleCardClick}
             />
-
             <CampList
               title="Get Active: Sports Camps"
-              description="From cycling to soccer, find the perfect camp for your young athlete."
+              description="From soccer to swimming, find the perfect camp for your young athlete."
               groupedCamps={sportsCamps}
               onCardClick={handleCardClick}
             />
-
             <HowItWorks />
             <Testimonials />
             <Footer />
