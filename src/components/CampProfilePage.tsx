@@ -1,133 +1,174 @@
-import type { GroupedCamp } from "@/utils/campUtils";
+import type { GroupedCamp, CampSession } from "@/utils/campUtils";
 import React from "react";
 import {
-  ArrowLeftCircle,
+  ArrowLeft,
   MapPin,
   Users,
   Calendar,
-  Link as LinkIcon,
+  Tag,
+  Sparkles,
 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { CATEGORIES_WITH_ICONS } from "../data/constants";
 
 interface CampProfilePageProps {
   camp: GroupedCamp;
   onBack: () => void;
-  darkMode: boolean;
 }
 
-function CampProfilePage({ camp, onBack, darkMode }: CampProfilePageProps) {
-  const imageUrl =
-    camp.image || "https://placehold.co/1200x600?text=FindMyCamps";
-
-  const formatDate = (date: Date): string => {
-    return new Date(date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
+const CampThumbnail = ({ camp }: { camp: GroupedCamp }) => {
+  const categoryInfo = CATEGORIES_WITH_ICONS.find(
+    (c) => c.name.toLowerCase() === camp.category?.toLowerCase(),
+  );
+  const Icon = categoryInfo?.icon || Sparkles;
+  const bgColor = categoryInfo?.bgColor || "bg-muted";
 
   return (
-    <div className="container mx-auto p-4 md:p-8">
-      <button
-        onClick={onBack}
-        className="flex items-center mb-6 text-indigo-600 hover:underline"
-      >
-        <ArrowLeftCircle className="w-6 h-6 mr-2" />
-        Back to All Camps
-      </button>
+    <div
+      className={`flex h-full w-full items-center justify-center rounded-2xl ${bgColor}`}
+    >
+      <Icon className="h-24 w-24 text-foreground/50" />
+    </div>
+  );
+};
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2">
-          <img
-            src={imageUrl}
-            alt={camp.name}
-            className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
-          />
-          <div className="mt-8">
-            <h1 className="text-4xl font-bold">{camp.name}</h1>
-            <p className="mt-4 text-lg">{camp.description}</p>
-          </div>
+function CampProfilePage({ camp, onBack }: CampProfilePageProps) {
+  return (
+    <div className="bg-background text-foreground">
+      <div className="container mx-auto max-w-screen-lg py-8 md:py-12">
+        <button
+          onClick={onBack}
+          className="flex items-center text-sm font-semibold text-foreground hover:underline mb-6"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to all camps
+        </button>
+
+        {/* ✅ ROW 1: Conditional Image or Thumbnail */}
+        <div className="w-full h-96 overflow-hidden rounded-2xl shadow-md mb-8">
+          {camp.image ? (
+            <img
+              src={camp.image}
+              alt={`Image of ${camp.name}`}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <CampThumbnail camp={camp} />
+          )}
         </div>
 
-        <div className="lg:col-span-1">
-          <div
-            className={`p-6 rounded-lg shadow-lg ${
-              darkMode ? "bg-gray-800" : "bg-gray-50"
-            }`}
-          >
-            <h2 className="text-2xl font-bold mb-6 border-b pb-4">
-              Camp Details
-            </h2>
+        {/* ROW 2: Two-column layout for details */}
+        <main className="grid grid-cols-1 lg:grid-cols-3 gap-x-12">
+          {/* -- LEFT COLUMN: Main Content -- */}
+          <div className="lg:col-span-2">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              {camp.name}
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              {camp.description}
+            </p>
 
-            <div className="space-y-4">
-              <h3 className="flex items-center font-semibold">
-                <Calendar className="w-5 h-5 mr-3 text-purple-500" />
-                Available Dates
+            <Separator className="my-8" />
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Tag className="w-5 h-5 mr-3 text-muted-foreground" />
+                Activities & Tags
               </h3>
-              <div className="space-y-3 pl-2">
-                {camp.sessions.map((session) => (
-                  <div
-                    key={session.campId}
-                    className={`p-3 rounded-md border ${
-                      darkMode
-                        ? "border-gray-700 bg-gray-900"
-                        : "border-gray-200 bg-white"
-                    }`}
+              <div className="flex flex-wrap gap-2">
+                {camp.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant="secondary"
+                    className="text-sm font-medium"
                   >
-                    <p className="font-semibold">
-                      {formatDate(session.dates.startDate)} –{" "}
-                      {formatDate(session.dates.endDate)}
-                    </p>
-
-                    <div className="flex justify-between items-center mt-2">
-                      <p className="text-lg font-bold text-yellow-500">
-                        ${session.price}
-                      </p>
-                      {/* ✅ FIX: Add optional chaining to safely access location */}
-                      {session?.location?.address && (
-                        <div className="flex items-center text-sm text-gray-500 text-right">
-                          <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                          <span className="truncate">
-                            {session.location.address}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                    {tag}
+                  </Badge>
                 ))}
               </div>
             </div>
-
-            <div className="mt-6 space-y-4 border-t pt-6">
-              {/* ✅ FIX: Add optional chaining here as well for safety */}
-              {camp.sessions?.[0]?.location && (
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-500" />
-                  <span>
-                    {camp.sessions[0].location.city},{" "}
-                    {camp.sessions[0].location.province}
-                  </span>
-                </div>
-              )}
-              <div className="flex items-center">
-                <Users className="w-5 h-5 mr-3 text-green-500" />
-                <span>Ages: {camp.ageRange}</span>
-              </div>
-            </div>
-
-            {camp.camplink && (
-              <a
-                href={camp.camplink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 flex items-center justify-center w-full text-center px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
-              >
-                <LinkIcon className="w-5 h-5 mr-2" />
-                Register on Camp Website
-              </a>
-            )}
           </div>
-        </div>
+
+          {/* -- RIGHT COLUMN: Sticky Details Card -- */}
+          <aside className="lg:col-span-1 mt-12 lg:mt-0">
+            <div className="sticky top-24">
+              <Card className="shadow-lg rounded-2xl">
+                <CardHeader>
+                  <CardTitle className="text-3xl font-bold">
+                    ${camp.sessions?.[0]?.price}
+                    <span className="text-lg font-normal text-muted-foreground">
+                      {" "}
+                      / week
+                    </span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div>
+                    <h4 className="text-sm font-semibold flex items-center mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Available Dates
+                    </h4>
+                    <div className="space-y-3">
+                      {camp.sessions.map((session) => (
+                        <div
+                          key={session.campId}
+                          className="p-3 rounded-lg border border-border"
+                        >
+                          <p className="font-semibold text-sm">
+                            {new Date(
+                              session.dates.startDate,
+                            ).toLocaleDateString("en-US", {
+                              month: "long",
+                              day: "numeric",
+                            })}{" "}
+                            –
+                            {new Date(session.dates.endDate).toLocaleDateString(
+                              "en-US",
+                              { month: "long", day: "numeric" },
+                            )}
+                          </p>
+                          <p className="text-xs text-muted-foreground flex items-center gap-1.5 mt-2">
+                            <MapPin className="w-3 h-3" />
+                            {session.location.address}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center gap-3">
+                      <Users className="w-4 h-4 text-muted-foreground" />
+                      <p className="font-semibold">Ages: {camp.ageRange}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <MapPin className="w-4 h-4 text-muted-foreground" />
+                      <p className="font-semibold">
+                        {camp.sessions?.[0]?.location.city},{" "}
+                        {camp.sessions?.[0]?.location.province}
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href={camp.camplink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button size="lg" className="w-full font-bold text-lg">
+                      Register
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </aside>
+        </main>
       </div>
     </div>
   );
