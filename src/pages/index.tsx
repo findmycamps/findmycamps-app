@@ -72,7 +72,6 @@ export default function HomePage() {
           <CampProfilePage
             camp={selectedCamp}
             onBack={() => setSelectedCamp(null)}
-            darkMode={isDarkMode}
           />
         ) : (
           <>
