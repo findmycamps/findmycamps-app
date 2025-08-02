@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
+import { useRouter } from "next/router";
 import { Search, MapPin, Calendar as CalendarIcon } from "lucide-react";
-
 import { PROVINCES } from "../data/constants";
 import { cn } from "@/lib/utils";
-
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -27,13 +26,14 @@ export interface SearchCriteria {
 }
 
 interface SearchBarProps {
-  onSearch: (criteria: SearchCriteria) => void;
+  onSearch?: (criteria: SearchCriteria) => void; // Made optional for homepage usage
+  redirectOnSearch?: boolean; // New prop to control routing behavior
 }
 
-function SearchBar({ onSearch }: SearchBarProps) {
+function SearchBar({ onSearch, redirectOnSearch = true }: SearchBarProps) {
+  const router = useRouter();
   const [keyword, setKeyword] = useState("");
   const [location, setLocation] = useState("ALL");
-  // ✅ State updated to handle a single date
   const [date, setDate] = useState<Date | undefined>();
   const [activeField, setActiveField] = useState<
     "what" | "where" | "when" | null
@@ -41,7 +41,20 @@ function SearchBar({ onSearch }: SearchBarProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSearch({ keyword, location, date });
+    const criteria = { keyword, location, date };
+
+    if (redirectOnSearch) {
+      // Redirect to search page with query parameters
+      const params = new URLSearchParams();
+      if (keyword) params.set("keyword", keyword);
+      if (location !== "ALL") params.set("location", location);
+      if (date) params.set("date", date.toISOString());
+
+      router.push(`/search?${params.toString()}`);
+    } else if (onSearch) {
+      // Call the callback for immediate filtering (used on search page)
+      onSearch(criteria);
+    }
   };
 
   return (
@@ -65,7 +78,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
               activeField ? "ring-2 ring-primary" : "",
             )}
           >
-            {/* Keywords Section - Label Removed */}
+            {/* Keywords Section */}
             <div className="relative flex items-center border-b lg:border-b-0 lg:border-r border-border/60">
               <div className="p-4 lg:py-3 lg:px-6 w-full">
                 <input
@@ -79,7 +92,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
               </div>
             </div>
 
-            {/* Location Section - Label Removed */}
+            {/* Location Section */}
             <div className="relative flex items-center border-b lg:border-b-0 lg:border-r border-border/60">
               <div className="p-4 lg:py-3 lg:px-6 w-full">
                 <Select
@@ -104,13 +117,16 @@ function SearchBar({ onSearch }: SearchBarProps) {
               </div>
             </div>
 
-            {/* Date Picker Section - Label Removed & Single Date Mode */}
+            {/* Date Picker Section */}
             <div className="relative flex items-center">
               <Popover
                 onOpenChange={(open) => setActiveField(open ? "when" : null)}
               >
                 <PopoverTrigger asChild>
-                  <button className="p-4 lg:py-3 lg:px-6 w-full text-left flex items-center justify-between">
+                  <button
+                    type="button"
+                    className="p-4 lg:py-3 lg:px-6 w-full text-left flex items-center justify-between"
+                  >
                     <span className="text-sm font-medium text-muted-foreground">
                       {date ? format(date, "LLL d, y") : "Add a date"}
                     </span>
