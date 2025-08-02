@@ -46,7 +46,7 @@
     "espree": "^10.3.0",
     "globals": "^16.2.0",
     "post": "^0.0.1",
-    "postcss": "^8.5.4",
+    "postcss": "^8.5.6",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.3",
