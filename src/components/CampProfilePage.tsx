@@ -27,11 +27,36 @@ const CampThumbnail = ({ camp }: { camp: GroupedCamp }) => {
   const Icon = categoryInfo?.icon || Sparkles;
   const bgColor = categoryInfo?.bgColor || "bg-muted";
 
+  if (camp.image) {
+    return (
+      <div className="relative w-full h-48 overflow-hidden rounded-lg">
+        <img
+          src={camp.image}
+          alt={`${camp.name} camp activities`}
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+            if (fallback) fallback.classList.remove("hidden");
+          }}
+        />
+
+        {/* Fallback icon */}
+        <div
+          className={`hidden absolute inset-0 flex items-center justify-center ${bgColor} rounded-lg`}
+        >
+          <Icon className={`w-12 h-12 text-muted-foreground`} />
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback to icon
   return (
     <div
-      className={`flex h-full w-full items-center justify-center rounded-2xl ${bgColor}`}
+      className={`flex items-center justify-center h-48 ${bgColor} rounded-lg`}
     >
-      <Icon className="h-24 w-24 text-foreground/50" />
+      <Icon className={`w-12 h-12 text-muted-foreground`} />
     </div>
   );
 };
@@ -54,7 +79,7 @@ function CampProfilePage({ camp, onBack }: CampProfilePageProps) {
             <img
               src={camp.image}
               alt={`Image of ${camp.name}`}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
           ) : (
             <CampThumbnail camp={camp} />
