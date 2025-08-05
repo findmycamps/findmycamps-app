@@ -93,7 +93,6 @@ export default async function handler(
       cost: "$0.00",
     });
   } catch (error) {
-    console.error(`❌ Failed to generate image for ${campName}:`, error);
     res.status(500).json({
       success: false,
       message: error instanceof Error ? error.message : "Unknown error",
