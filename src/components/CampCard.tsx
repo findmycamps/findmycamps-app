@@ -14,11 +14,37 @@ const CampThumbnail = ({ camp }: { camp: GroupedCamp }) => {
   // ✅ Directly use the bgColor property with a fallback to bg-muted
   const bgColor = categoryInfo?.bgColor || "bg-muted";
 
+  if (camp.image) {
+    return (
+      <div className="relative w-full h-32 overflow-hidden rounded-lg">
+        <img
+          src={camp.image}
+          alt={`${camp.name} camp activities`}
+          className="w-full h-full object-fill" // Uses stretch to fit as you requested
+          onError={(e) => {
+            // If Firebase image fails, fallback to icon
+            e.currentTarget.style.display = "none";
+            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+            if (fallback) fallback.classList.remove("hidden");
+          }}
+        />
+
+        {/* Fallback icon (hidden by default, shown if image fails) */}
+        <div
+          className={`hidden absolute inset-0 flex items-center justify-center ${bgColor} rounded-lg`}
+        >
+          <Icon className={`w-12 h-12 ${color}`} />
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback to icon-based thumbnail when no image exists
   return (
     <div
-      className={`w-full h-40 flex items-center justify-center ${bgColor} group-hover:scale-105 transition-transform duration-300`}
+      className={`flex items-center justify-center h-32 ${bgColor} rounded-lg`}
     >
-      <Icon className={`w-16 h-16 ${color}`} strokeWidth={1.5} />
+      <Icon className={`w-12 h-12 ${color}`} />
     </div>
   );
 };
