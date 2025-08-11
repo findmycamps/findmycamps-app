@@ -64,3 +64,80 @@
       "calt" 1;
   }
 }
+
+/* Add to your global CSS */
+@media (max-width: 768px) {
+  .sticky-search-mobile {
+    padding: 0.5rem;
+    top: 56px; /* Adjust based on mobile header height */
+  }
+  
+  .sticky-search-mobile .search-input {
+    padding: 0.75rem 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Smooth backdrop blur effect */
+.sticky-search-backdrop {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.dark .sticky-search-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation keyframes for smooth transition */
+@keyframes diffuseIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.diffuse-animation {
+  animation: diffuseIn 0.4s ease-out forwards;
+}
+
+/* Add to your global CSS for extra glassmorphism effects */
+@supports (backdrop-filter: blur()) {
+  .floating-pill-enhanced {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur()) {
+  .floating-pill-enhanced {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .dark .floating-pill-enhanced {
+    background-color: rgba(17, 24, 39, 0.95);
+  }
+}
+
+/* Smooth animation keyframes */
+@keyframes pillFloat {
+  0% { 
+    transform: translateY(-10px) scale(0.95);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.floating-pill-enter {
+  animation: pillFloat 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+
