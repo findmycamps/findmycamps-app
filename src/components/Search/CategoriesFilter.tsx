@@ -14,12 +14,12 @@ interface CategoriesFilterProps {
 export const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
   selectedCategories,
   filterCategories,
-  onCategoryChange
+  onCategoryChange,
 }) => {
   return (
     <div className="mb-8">
       <h3 className="font-semibold mb-4">Categories</h3>
-      
+
       {/* Show SearchBar selected categories */}
       {selectedCategories && selectedCategories.length > 0 && (
         <div className="mb-4 p-3 bg-primary/5 rounded-lg">
@@ -27,7 +27,7 @@ export const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
             From Search ({selectedCategories.length} selected):
           </div>
           <div className="flex flex-wrap gap-1">
-            {selectedCategories.map(category => (
+            {selectedCategories.map((category) => (
               <Badge key={category} variant="default" className="text-xs">
                 {category}
               </Badge>
@@ -35,17 +35,20 @@ export const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
           </div>
         </div>
       )}
-      
+
       <div className="space-y-3">
-        {CATEGORIES_WITH_ICONS.filter(cat => cat.name !== "All Categories").map(category => (
+        {CATEGORIES_WITH_ICONS.filter(
+          (cat) => cat.name !== "All Categories",
+        ).map((category) => (
           <div key={category.name} className="flex items-center space-x-2">
             <Checkbox
               id={category.name}
               checked={
-                filterCategories.includes(category.name) || 
-                selectedCategories?.includes(category.name) || false
+                filterCategories.includes(category.name) ||
+                selectedCategories?.includes(category.name) ||
+                false
               }
-              onCheckedChange={(checked) => 
+              onCheckedChange={(checked) =>
                 onCategoryChange(category.name, checked as boolean)
               }
             />

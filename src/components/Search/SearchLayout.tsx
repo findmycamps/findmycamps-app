@@ -1,7 +1,13 @@
 // components/Search/SearchLayout.tsx - Enhanced mobile responsiveness
 
 import React, { ReactNode } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SlidersHorizontal } from "lucide-react";
@@ -27,15 +33,16 @@ export const SearchLayout: React.FC<SearchLayoutProps> = ({
   onMobileToggle,
   hasActiveFilters,
   showMap,
-  mapPanel
+  mapPanel,
 }) => {
   return (
     <div className="flex min-h-screen">
       {/* ✅ UPDATED: Desktop Sidebar - Hide on mobile */}
-      <div className={`hidden lg:block transition-all duration-300 ${
-        sidebarCollapsed ? 'w-16' : 'w-[350px]'
-      } bg-background border-r border-border relative`}>
-        
+      <div
+        className={`hidden lg:block transition-all duration-300 ${
+          sidebarCollapsed ? "w-16" : "w-[350px]"
+        } bg-background border-r border-border relative`}
+      >
         <div className="sticky top-0 h-screen">
           <Button
             variant="ghost"
@@ -43,12 +50,14 @@ export const SearchLayout: React.FC<SearchLayoutProps> = ({
             onClick={onToggleCollapse}
             className="absolute -right-3 top-4 z-10 w-6 h-6 rounded-full border border-border bg-background shadow-sm"
           >
-            {sidebarCollapsed ? '>' : '<'}
+            {sidebarCollapsed ? ">" : "<"}
           </Button>
 
-          <div className={`transition-opacity duration-300 ${
-            sidebarCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          } h-full`}>
+          <div
+            className={`transition-opacity duration-300 ${
+              sidebarCollapsed ? "opacity-0 pointer-events-none" : "opacity-100"
+            } h-full`}
+          >
             {!sidebarCollapsed && sidebar}
           </div>
 
@@ -77,9 +86,11 @@ export const SearchLayout: React.FC<SearchLayoutProps> = ({
       </div>
 
       {/* ✅ UPDATED: Main Content - Full width on mobile */}
-      <div className={`flex-1 min-w-0 transition-all duration-300 ${
-        showMap ? 'lg:pr-0' : 'lg:pr-8'
-      }`}>
+      <div
+        className={`flex-1 min-w-0 transition-all duration-300 ${
+          showMap ? "lg:pr-0" : "lg:pr-8"
+        }`}
+      >
         {children}
       </div>
 
@@ -96,9 +107,7 @@ export const SearchLayout: React.FC<SearchLayoutProps> = ({
           <SheetHeader className="px-4 py-4 border-b">
             <SheetTitle>Filters</SheetTitle>
           </SheetHeader>
-          <div className="overflow-y-auto h-full">
-            {sidebar}
-          </div>
+          <div className="overflow-y-auto h-full">{sidebar}</div>
         </SheetContent>
       </Sheet>
     </div>

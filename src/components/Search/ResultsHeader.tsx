@@ -4,16 +4,22 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Grid3X3, List, Map, MapPinOff, SlidersHorizontal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { SearchCriteria } from "@/components/SearchBar";
 import { generateResultsTitle } from "@/utils/searchHelpers";
 
 interface ResultsHeaderProps {
   searchCriteria: SearchCriteria;
   resultsCount: number;
-  viewMode: 'list' | 'grid';
+  viewMode: "list" | "grid";
   showMap: boolean;
-  onViewModeChange: (mode: 'list' | 'grid') => void;
+  onViewModeChange: (mode: "list" | "grid") => void;
   onMapToggle: () => void;
   mobileFiltersOpen?: boolean;
   onMobileFiltersToggle?: (open: boolean) => void;
@@ -33,7 +39,7 @@ export const ResultsHeader: React.FC<ResultsHeaderProps> = ({
   onMobileFiltersToggle,
   hasActiveFilters,
   activeFiltersCount = 0,
-  mobileFiltersSidebar
+  mobileFiltersSidebar,
 }) => {
   return (
     <div className="flex flex-col gap-4">
@@ -52,23 +58,23 @@ export const ResultsHeader: React.FC<ResultsHeaderProps> = ({
             )}
           </p>
         </div>
-        
+
         {/* ✅ Desktop Controls - Show list/grid toggle only on desktop */}
         <div className="hidden lg:flex items-center gap-3">
           <div className="flex items-center gap-2">
             <Button
-              variant={viewMode === 'list' ? 'default' : 'outline'}
+              variant={viewMode === "list" ? "default" : "outline"}
               size="sm"
-              onClick={() => onViewModeChange('list')}
+              onClick={() => onViewModeChange("list")}
               className="flex items-center gap-2"
             >
               <List className="w-4 h-4" />
               List
             </Button>
             <Button
-              variant={viewMode === 'grid' ? 'default' : 'outline'}
+              variant={viewMode === "grid" ? "default" : "outline"}
               size="sm"
-              onClick={() => onViewModeChange('grid')}
+              onClick={() => onViewModeChange("grid")}
               className="flex items-center gap-2"
             >
               <Grid3X3 className="w-4 h-4" />
@@ -78,7 +84,7 @@ export const ResultsHeader: React.FC<ResultsHeaderProps> = ({
 
           <div className="border-l border-border pl-3">
             <Button
-              variant={showMap ? 'default' : 'outline'}
+              variant={showMap ? "default" : "outline"}
               size="sm"
               onClick={onMapToggle}
               className="flex items-center gap-2"
@@ -104,11 +110,18 @@ export const ResultsHeader: React.FC<ResultsHeaderProps> = ({
         {/* Mobile Filters Button */}
         <Sheet open={mobileFiltersOpen} onOpenChange={onMobileFiltersToggle}>
           <SheetTrigger asChild>
-            <Button variant="outline" size="sm" className="flex items-center gap-2 flex-1">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2 flex-1"
+            >
               <SlidersHorizontal className="w-4 h-4" />
               <span>Filters</span>
               {hasActiveFilters && activeFiltersCount > 0 && (
-                <Badge variant="destructive" className="ml-1 h-5 w-5 p-0 text-xs">
+                <Badge
+                  variant="destructive"
+                  className="ml-1 h-5 w-5 p-0 text-xs"
+                >
                   {activeFiltersCount}
                 </Badge>
               )}
@@ -118,21 +131,19 @@ export const ResultsHeader: React.FC<ResultsHeaderProps> = ({
             <SheetHeader className="px-4 py-4 border-b">
               <SheetTitle>Filters</SheetTitle>
             </SheetHeader>
-            <div className="overflow-y-auto h-full">
-              {mobileFiltersSidebar}
-            </div>
+            <div className="overflow-y-auto h-full">{mobileFiltersSidebar}</div>
           </SheetContent>
         </Sheet>
 
         {/* ✅ UPDATED: Map Toggle - Only button on mobile */}
         <Button
-          variant={showMap ? 'default' : 'outline'}
+          variant={showMap ? "default" : "outline"}
           size="sm"
           onClick={onMapToggle}
           className="px-4"
         >
           <Map className="w-4 h-4 mr-2" />
-          {showMap ? 'Hide Map' : 'Map'}
+          {showMap ? "Hide Map" : "Map"}
         </Button>
       </div>
     </div>

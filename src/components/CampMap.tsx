@@ -289,7 +289,7 @@ const geocodeAddress = async (
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`,
     );
     const data = await response.json();
-    
+
     if (data.status === "OVER_QUERY_LIMIT") {
       console.warn("Geocoding quota exceeded. Using fallback coordinates.");
       geocodeCache.set(address, null);
@@ -319,8 +319,12 @@ const CampMap: React.FC<CampMapProps> = ({
   userLocation, // ✅ NEW: Accept user location as prop
 }) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-  const [campsWithCoords, setCampsWithCoords] = useState<CampWithCoordinates[]>([]);
-  const [selectedMarker, setSelectedMarker] = useState<GroupedCamp | null>(null);
+  const [campsWithCoords, setCampsWithCoords] = useState<CampWithCoordinates[]>(
+    [],
+  );
+  const [selectedMarker, setSelectedMarker] = useState<GroupedCamp | null>(
+    null,
+  );
   const mapRef = useRef<google.maps.Map | null>(null);
 
   // ✅ PRESERVED: Your existing theme detection
@@ -379,7 +383,8 @@ const CampMap: React.FC<CampMapProps> = ({
       };
 
       // ✅ NEW: Use user location if available, otherwise use province center
-      const center = userLocation || provinceCenters[mostCommonProvince] || defaultCenter;
+      const center =
+        userLocation || provinceCenters[mostCommonProvince] || defaultCenter;
 
       mapRef.current.setCenter(center);
       mapRef.current.setZoom(userLocation ? 10 : 7); // Zoom closer if we have user location
@@ -390,7 +395,7 @@ const CampMap: React.FC<CampMapProps> = ({
   useEffect(() => {
     if (campsWithCoords.length > 0 && mapRef.current) {
       const bounds = new window.google.maps.LatLngBounds();
-      
+
       // Add all camp coordinates to bounds
       campsWithCoords.forEach((camp) => {
         bounds.extend(camp.coordinates);
@@ -550,7 +555,10 @@ const CampMap: React.FC<CampMapProps> = ({
       {/* ✅ PRESERVED: Your existing InfoWindow */}
       {selectedMarker && (
         <InfoWindow
-          position={campsWithCoords.find(c => c.name === selectedMarker.name)?.coordinates}
+          position={
+            campsWithCoords.find((c) => c.name === selectedMarker.name)
+              ?.coordinates
+          }
           onCloseClick={() => setSelectedMarker(null)}
         >
           <div>

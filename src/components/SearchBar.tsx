@@ -13,7 +13,7 @@ export interface SearchCriteria {
   location: string;
   dateRange?: DateRange;
   locationCoords?: { lat: number; lng: number } | null;
-  locationType?: 'nearby' | 'specific' | 'all';
+  locationType?: "nearby" | "specific" | "all";
   selectedCategories?: string[];
 }
 
@@ -21,20 +21,20 @@ interface SearchBarProps {
   // Existing props
   onSearch?: (criteria: SearchCriteria) => void;
   redirectOnSearch?: boolean;
-  
+
   // Configuration props
   showCategoriesDropdown?: boolean;
   showBadges?: boolean;
   placeholderText?: string;
-  enabledFilters?: ('location' | 'categories' | 'dates')[];
+  enabledFilters?: ("location" | "categories" | "dates")[];
   showDropdown?: boolean;
   floatingMode?: boolean;
   showClearButton?: boolean;
-  
+
   // Future personalization props
   showFindMyMatchButton?: boolean;
   personalizedSuggestions?: any[];
-  
+
   // ✅ NEW: Controlled input props
   value?: string; // External keyword value
   onValueChange?: (value: string) => void; // Callback when user types
@@ -45,41 +45,49 @@ const SUGGESTED_DESTINATIONS = [
     type: "nearby",
     label: "Nearby",
     icon: Navigation,
-    value: "NEARBY"
+    value: "NEARBY",
   },
   {
     type: "location",
     label: "Victoria BC",
     icon: MapPin,
-    value: "Victoria, BC"
+    value: "Victoria, BC",
   },
 ];
 
-function SearchBar({ 
-  onSearch, 
-  redirectOnSearch = true, 
+function SearchBar({
+  onSearch,
+  redirectOnSearch = true,
   showCategoriesDropdown = true,
   showBadges = true,
   placeholderText,
-  enabledFilters = ['location', 'categories', 'dates'],
+  enabledFilters = ["location", "categories", "dates"],
   showDropdown = true,
   floatingMode = false,
   showClearButton = false,
   showFindMyMatchButton = false,
   personalizedSuggestions = [],
   value, // ✅ NEW: External keyword value
-  onValueChange // ✅ NEW: Callback for typing
+  onValueChange, // ✅ NEW: Callback for typing
 }: SearchBarProps) {
   const router = useRouter();
-  
+
   // ✅ UPDATED: Use external value if provided, otherwise internal state
   const [keyword, setKeyword] = useState(value || "");
-  const [selectedDateRange, setSelectedDateRange] = useState<DateRange | undefined>();
+  const [selectedDateRange, setSelectedDateRange] = useState<
+    DateRange | undefined
+  >();
   const [selectedLocation, setSelectedLocation] = useState<string>("");
-  const [selectedLocationLabel, setSelectedLocationLabel] = useState<string>("");
+  const [selectedLocationLabel, setSelectedLocationLabel] =
+    useState<string>("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [locationType, setLocationType] = useState<'nearby' | 'specific' | 'all'>('all');
-  const [locationCoords, setLocationCoords] = useState<{ lat: number; lng: number } | null>(null);
+  const [locationType, setLocationType] = useState<
+    "nearby" | "specific" | "all"
+  >("all");
+  const [locationCoords, setLocationCoords] = useState<{
+    lat: number;
+    lng: number;
+  } | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isGettingLocation, setIsGettingLocation] = useState(false);
@@ -103,7 +111,9 @@ function SearchBar({
         return;
       }
 
-      const popoverContent = document.querySelector('[data-radix-popper-content-wrapper]');
+      const popoverContent = document.querySelector(
+        "[data-radix-popper-content-wrapper]",
+      );
       if (popoverContent && popoverContent.contains(target)) {
         return;
       }
@@ -140,16 +150,17 @@ function SearchBar({
   const getCurrentLocation = (): Promise<{ lat: number; lng: number }> => {
     return new Promise((resolve, reject) => {
       if (!navigator.geolocation) {
-        reject(new Error('Geolocation not supported'));
+        reject(new Error("Geolocation not supported"));
         return;
       }
       navigator.geolocation.getCurrentPosition(
-        (position) => resolve({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        }),
-        (error) => reject(new Error('Location access denied')),
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 }
+        (position) =>
+          resolve({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          }),
+        (error) => reject(new Error("Location access denied")),
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 },
       );
     });
   };
@@ -158,7 +169,7 @@ function SearchBar({
     if (suggestion.type === "nearby") {
       setSelectedLocation("NEARBY");
       setSelectedLocationLabel("Nearby");
-      setLocationType('nearby');
+      setLocationType("nearby");
       setIsOpen(false);
       setIsFocused(false);
 
@@ -174,7 +185,7 @@ function SearchBar({
     } else {
       setSelectedLocation(suggestion.value);
       setSelectedLocationLabel(suggestion.label);
-      setLocationType('specific');
+      setLocationType("specific");
       setIsOpen(false);
       setIsFocused(false);
     }
@@ -184,9 +195,9 @@ function SearchBar({
     if (categoryName === "All Categories") {
       setSelectedCategories([]);
     } else {
-      setSelectedCategories(prev => {
+      setSelectedCategories((prev) => {
         if (prev.includes(categoryName)) {
-          return prev.filter(cat => cat !== categoryName);
+          return prev.filter((cat) => cat !== categoryName);
         } else {
           return [...prev, categoryName];
         }
@@ -201,14 +212,14 @@ function SearchBar({
     setSelectedLocation("");
     setSelectedLocationLabel("");
     setSelectedCategories([]);
-    setLocationType('all');
+    setLocationType("all");
     setLocationCoords(null);
     setSelectedDateRange(undefined);
-    
+
     if (onValueChange) {
       onValueChange(clearedKeyword);
     }
-    
+
     // Trigger search with cleared criteria
     if (onSearch) {
       onSearch({
@@ -216,8 +227,8 @@ function SearchBar({
         location: "ALL",
         dateRange: undefined,
         locationCoords: undefined,
-        locationType: 'all',
-        selectedCategories: undefined
+        locationType: "all",
+        selectedCategories: undefined,
       });
     }
   };
@@ -229,13 +240,15 @@ function SearchBar({
       dateRange: selectedDateRange,
       locationCoords: locationCoords,
       locationType: locationType,
-      selectedCategories: selectedCategories.length > 0 ? selectedCategories : undefined
+      selectedCategories:
+        selectedCategories.length > 0 ? selectedCategories : undefined,
     };
 
     if (redirectOnSearch) {
       const params = new URLSearchParams();
       if (criteria.keyword) params.set("keyword", criteria.keyword);
-      if (criteria.location && criteria.location !== 'ALL') params.set("location", criteria.location);
+      if (criteria.location && criteria.location !== "ALL")
+        params.set("location", criteria.location);
 
       if (criteria.dateRange?.from) {
         params.set("dateFrom", criteria.dateRange.from.toISOString());
@@ -248,8 +261,12 @@ function SearchBar({
         params.set("lat", criteria.locationCoords.lat.toString());
         params.set("lng", criteria.locationCoords.lng.toString());
       }
-      if (criteria.locationType) params.set("locationType", criteria.locationType);
-      if (criteria.selectedCategories && criteria.selectedCategories.length > 0) {
+      if (criteria.locationType)
+        params.set("locationType", criteria.locationType);
+      if (
+        criteria.selectedCategories &&
+        criteria.selectedCategories.length > 0
+      ) {
         params.set("categories", criteria.selectedCategories.join(","));
       }
 
@@ -271,7 +288,7 @@ function SearchBar({
     setSelectedLocation("");
     setSelectedLocationLabel("");
     setSelectedCategories([]);
-    setLocationType('all');
+    setLocationType("all");
     setLocationCoords(null);
     setSelectedDateRange(undefined);
   };
@@ -283,7 +300,12 @@ function SearchBar({
     const parts = [];
 
     // Use the current keyword (which is now synced)
-    if (keyword && !selectedCategories.some(cat => cat.toLowerCase() === keyword.toLowerCase())) {
+    if (
+      keyword &&
+      !selectedCategories.some(
+        (cat) => cat.toLowerCase() === keyword.toLowerCase(),
+      )
+    ) {
       parts.push(keyword);
     }
 
@@ -300,91 +322,109 @@ function SearchBar({
 
   const getPlaceholderText = () => {
     if (isGettingLocation) return "Getting your location...";
-    
+
     if (placeholderText) return placeholderText;
-    
+
     if (selectedCategories.length > 0 || selectedLocation) {
       return "Add more criteria or click search...";
     }
-    
+
     return "Search camps, activities...";
   };
 
   return (
-    <div className={cn(
-      "relative mx-auto",
-      floatingMode ? "max-w-full" : "max-w-3xl mt-8"
-    )} ref={searchRef}>
-      
-      {/* Skip badges in floating mode */}
-      {!floatingMode && showBadges && (selectedCategories.length > 0 || selectedLocation || selectedDateRange) && (
-        <div className="mb-4 flex flex-wrap justify-center gap-2">
-          {selectedLocation && (
-            <div className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              📍 {selectedLocationLabel}
-              <button
-                onClick={() => {
-                  setSelectedLocation("");
-                  setSelectedLocationLabel("");
-                  setLocationType('all');
-                  setLocationCoords(null);
-                }}
-                className="ml-2 text-blue-400 hover:text-blue-600"
-              >
-                ×
-              </button>
-            </div>
-          )}
-
-          {selectedCategories.map(category => (
-            <div key={category} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              📂 {category}
-              <button
-                onClick={() => setSelectedCategories(prev => prev.filter(cat => cat !== category))}
-                className="ml-2 text-primary/60 hover:text-primary"
-              >
-                ×
-              </button>
-            </div>
-          ))}
-
-          {selectedDateRange?.from && (
-            <div className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              📅 {selectedDateRange.to ? (
-                `${selectedDateRange.from.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - ${selectedDateRange.to.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`
-              ) : (
-                selectedDateRange.from.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-              )}
-              <button
-                onClick={() => setSelectedDateRange(undefined)}
-                className="ml-2 text-green-400 hover:text-green-600"
-              >
-                ×
-              </button>
-            </div>
-          )}
-        </div>
+    <div
+      className={cn(
+        "relative mx-auto",
+        floatingMode ? "max-w-full" : "max-w-3xl mt-8",
       )}
+      ref={searchRef}
+    >
+      {/* Skip badges in floating mode */}
+      {!floatingMode &&
+        showBadges &&
+        (selectedCategories.length > 0 ||
+          selectedLocation ||
+          selectedDateRange) && (
+          <div className="mb-4 flex flex-wrap justify-center gap-2">
+            {selectedLocation && (
+              <div className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                📍 {selectedLocationLabel}
+                <button
+                  onClick={() => {
+                    setSelectedLocation("");
+                    setSelectedLocationLabel("");
+                    setLocationType("all");
+                    setLocationCoords(null);
+                  }}
+                  className="ml-2 text-blue-400 hover:text-blue-600"
+                >
+                  ×
+                </button>
+              </div>
+            )}
+
+            {selectedCategories.map((category) => (
+              <div
+                key={category}
+                className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium flex items-center"
+              >
+                📂 {category}
+                <button
+                  onClick={() =>
+                    setSelectedCategories((prev) =>
+                      prev.filter((cat) => cat !== category),
+                    )
+                  }
+                  className="ml-2 text-primary/60 hover:text-primary"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+
+            {selectedDateRange?.from && (
+              <div className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                📅{" "}
+                {selectedDateRange.to
+                  ? `${selectedDateRange.from.toLocaleDateString("en-US", { month: "short", day: "numeric" })} - ${selectedDateRange.to.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`
+                  : selectedDateRange.from.toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                    })}
+                <button
+                  onClick={() => setSelectedDateRange(undefined)}
+                  className="ml-2 text-green-400 hover:text-green-600"
+                >
+                  ×
+                </button>
+              </div>
+            )}
+          </div>
+        )}
 
       <form onSubmit={handleSubmit} className="relative">
-        <div className={cn(
-          "transition-all duration-300 ease-out",
-          floatingMode 
-            ? "bg-transparent rounded-full border-0 shadow-none" 
-            : "bg-white rounded-full shadow-lg border",
-          !floatingMode && isFocused
-            ? "shadow-2xl scale-[1.02] border-primary/20"
-            : !floatingMode && "shadow-md hover:shadow-lg border-gray-200"
-        )}>
-          <div className={cn(
-            "flex items-center",
-            floatingMode ? "p-1" : "p-2"
-          )}>
+        <div
+          className={cn(
+            "transition-all duration-300 ease-out",
+            floatingMode
+              ? "bg-transparent rounded-full border-0 shadow-none"
+              : "bg-white rounded-full shadow-lg border",
+            !floatingMode && isFocused
+              ? "shadow-2xl scale-[1.02] border-primary/20"
+              : !floatingMode && "shadow-md hover:shadow-lg border-gray-200",
+          )}
+        >
+          <div
+            className={cn("flex items-center", floatingMode ? "p-1" : "p-2")}
+          >
             <div className="flex-1 relative">
-              <div className={cn(
-                "absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400",
-                floatingMode && "left-4"
-              )}>
+              <div
+                className={cn(
+                  "absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400",
+                  floatingMode && "left-4",
+                )}
+              >
                 <Search className="w-5 h-5" />
               </div>
               <input
@@ -399,30 +439,33 @@ function SearchBar({
                 disabled={isGettingLocation}
                 className={cn(
                   "w-full py-4 text-base font-medium placeholder:text-gray-400 bg-transparent focus:outline-none disabled:opacity-50",
-                  floatingMode 
-                    ? "pl-12 pr-4 rounded-full" 
-                    : "pl-12 pr-4 rounded-l-full"
+                  floatingMode
+                    ? "pl-12 pr-4 rounded-full"
+                    : "pl-12 pr-4 rounded-l-full",
                 )}
               />
 
-              {(selectedCategories.length > 0 || selectedLocation || selectedDateRange) && !floatingMode && (
-                <button
-                  type="button"
-                  onClick={clearSelections}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm"
-                >
-                  ✕
-                </button>
-              )}
+              {(selectedCategories.length > 0 ||
+                selectedLocation ||
+                selectedDateRange) &&
+                !floatingMode && (
+                  <button
+                    type="button"
+                    onClick={clearSelections}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm"
+                  >
+                    ✕
+                  </button>
+                )}
             </div>
 
             {/* Only show date picker if dates are in enabledFilters */}
-            {enabledFilters.includes('dates') && (
-              <div 
-                ref={datePickerRef} 
+            {enabledFilters.includes("dates") && (
+              <div
+                ref={datePickerRef}
                 className={cn(
                   "flex items-center pl-4",
-                  !floatingMode && "border-l border-gray-200"
+                  !floatingMode && "border-l border-gray-200",
                 )}
                 onMouseDown={(e) => e.stopPropagation()}
               >
@@ -434,27 +477,34 @@ function SearchBar({
                 />
               </div>
             )}
-            
-            <div className={cn(
-              "flex items-center gap-2",
-              floatingMode ? "ml-2" : "ml-2"
-            )}>
-              {/* Clear button */}
-              {showClearButton && (keyword || selectedLocation || selectedCategories.length > 0) && (
-                <Button
-                  type="button"
-                  variant="outline"
-                  size={floatingMode ? "sm" : "lg"}
-                  onClick={handleClear}
-                  className={cn(
-                    "text-muted-foreground hover:text-foreground rounded-full transition-all duration-200",
-                    floatingMode ? "h-10 px-3" : "h-12 px-4"
-                  )}
-                >
-                  <X className="w-4 h-4 mr-1" />
-                  {!floatingMode && <span className="hidden sm:inline">Clear</span>}
-                </Button>
+
+            <div
+              className={cn(
+                "flex items-center gap-2",
+                floatingMode ? "ml-2" : "ml-2",
               )}
+            >
+              {/* Clear button */}
+              {showClearButton &&
+                (keyword ||
+                  selectedLocation ||
+                  selectedCategories.length > 0) && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size={floatingMode ? "sm" : "lg"}
+                    onClick={handleClear}
+                    className={cn(
+                      "text-muted-foreground hover:text-foreground rounded-full transition-all duration-200",
+                      floatingMode ? "h-10 px-3" : "h-12 px-4",
+                    )}
+                  >
+                    <X className="w-4 h-4 mr-1" />
+                    {!floatingMode && (
+                      <span className="hidden sm:inline">Clear</span>
+                    )}
+                  </Button>
+                )}
 
               <Button
                 type="submit"
@@ -462,7 +512,7 @@ function SearchBar({
                 disabled={isGettingLocation}
                 className={cn(
                   "bg-primary hover:bg-primary/90 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105",
-                  floatingMode ? "h-10 px-4" : "h-12 px-6"
+                  floatingMode ? "h-10 px-4" : "h-12 px-6",
                 )}
               >
                 <Search className={cn("w-4 h-4", !floatingMode && "md:mr-2")} />
@@ -496,7 +546,7 @@ function SearchBar({
       {!floatingMode && showDropdown && isOpen && !isGettingLocation && (
         <div className="absolute top-full mt-2 w-full bg-white rounded-xl border border-gray-200 shadow-lg z-40 max-h-96 overflow-y-auto">
           <div className="p-6">
-            {enabledFilters.includes('location') && (
+            {enabledFilters.includes("location") && (
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-700 mb-4">
                   Suggested destinations
@@ -508,7 +558,8 @@ function SearchBar({
                       onClick={() => handleSuggestionClick(suggestion)}
                       className={cn(
                         "p-4 hover:bg-gray-50 rounded-lg transition-colors text-center group",
-                        selectedLocation === suggestion.value && "bg-blue-50 border border-blue-200"
+                        selectedLocation === suggestion.value &&
+                          "bg-blue-50 border border-blue-200",
                       )}
                     >
                       <suggestion.icon className="w-7 h-7 mx-auto mb-2 text-gray-600 group-hover:text-primary" />
@@ -521,62 +572,70 @@ function SearchBar({
               </div>
             )}
 
-            {showCategoriesDropdown && enabledFilters.includes('categories') && (
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-gray-700">
-                    Explore by category
-                  </h3>
-                  {selectedCategories.length > 0 && (
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
-                        {selectedCategories.length} selected
-                      </span>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => setSelectedCategories([])}
-                        className="text-sm text-gray-500 hover:text-gray-700 h-auto py-1 px-2"
-                      >
-                        Clear all
-                      </Button>
-                    </div>
-                  )}
-                </div>
-
-                <div className="grid grid-cols-7 gap-3">
-                  {CATEGORIES_WITH_ICONS.slice(0, 14).map((category, index) => {
-                    const Icon = category.icon;
-                    const isSelected = selectedCategories.includes(category.name);
-                    return (
-                      <button
-                        key={index}
-                        onClick={() => handleCategoryClick(category.name)}
-                        className={cn(
-                          "flex flex-col items-center p-3 hover:bg-gray-50 rounded-lg transition-colors text-center group relative",
-                          isSelected && "bg-primary/10 border border-primary/20"
-                        )}
-                      >
-                        {isSelected && (
-                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">
-                            ✓
-                          </div>
-                        )}
-                        <div className={cn(
-                          "flex items-center justify-center w-12 h-12 rounded-lg mb-2 group-hover:scale-105 transition-transform",
-                          category.bgColor
-                        )}>
-                          <Icon className={cn("w-6 h-6", category.color)} />
-                        </div>
-                        <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
-                          {category.name}
+            {showCategoriesDropdown &&
+              enabledFilters.includes("categories") && (
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-gray-700">
+                      Explore by category
+                    </h3>
+                    {selectedCategories.length > 0 && (
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+                          {selectedCategories.length} selected
                         </span>
-                      </button>
-                    );
-                  })}
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setSelectedCategories([])}
+                          className="text-sm text-gray-500 hover:text-gray-700 h-auto py-1 px-2"
+                        >
+                          Clear all
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="grid grid-cols-7 gap-3">
+                    {CATEGORIES_WITH_ICONS.slice(0, 14).map(
+                      (category, index) => {
+                        const Icon = category.icon;
+                        const isSelected = selectedCategories.includes(
+                          category.name,
+                        );
+                        return (
+                          <button
+                            key={index}
+                            onClick={() => handleCategoryClick(category.name)}
+                            className={cn(
+                              "flex flex-col items-center p-3 hover:bg-gray-50 rounded-lg transition-colors text-center group relative",
+                              isSelected &&
+                                "bg-primary/10 border border-primary/20",
+                            )}
+                          >
+                            {isSelected && (
+                              <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">
+                                ✓
+                              </div>
+                            )}
+                            <div
+                              className={cn(
+                                "flex items-center justify-center w-12 h-12 rounded-lg mb-2 group-hover:scale-105 transition-transform",
+                                category.bgColor,
+                              )}
+                            >
+                              <Icon className={cn("w-6 h-6", category.color)} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
+                              {category.name}
+                            </span>
+                          </button>
+                        );
+                      },
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         </div>
       )}

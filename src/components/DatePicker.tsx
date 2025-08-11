@@ -8,8 +8,18 @@ import { format, isValid, parseISO, addDays } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { DateRange } from "react-day-picker";
 
 interface DatePickerProps {
@@ -20,24 +30,46 @@ interface DatePickerProps {
 }
 
 const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 const currentYear = new Date().getFullYear();
-const YEARS = Array.from({ length: Math.min(7, 2027 - currentYear) }, (_, i) => currentYear + i);
+const YEARS = Array.from(
+  { length: Math.min(7, 2027 - currentYear) },
+  (_, i) => currentYear + i,
+);
 
-export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range", className }: DatePickerProps) {
+export function DatePicker({
+  dateRange,
+  onSelect,
+  placeholder = "Pick date range",
+  className,
+}: DatePickerProps) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [viewMode, setViewMode] = React.useState<"calendar" | "month">("calendar");
-  const [currentMonth, setCurrentMonth] = React.useState<Date>(dateRange?.from || new Date());
+  const [viewMode, setViewMode] = React.useState<"calendar" | "month">(
+    "calendar",
+  );
+  const [currentMonth, setCurrentMonth] = React.useState<Date>(
+    dateRange?.from || new Date(),
+  );
 
   const maxDate = new Date(2026, 11, 31);
   const minDate = new Date();
 
   const handleMonthSelect = (monthIndex: number, year: number) => {
     if (year >= 2027) return;
-    
+
     const newDate = new Date(year, monthIndex, 1);
     setCurrentMonth(newDate);
     setViewMode("calendar");
@@ -72,7 +104,7 @@ export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range
 
   const getDateRangeText = () => {
     if (!dateRange?.from) return placeholder;
-    
+
     if (dateRange.to) {
       return `${format(dateRange.from, "MMM d")} - ${format(dateRange.to, "MMM d, yyyy")}`;
     } else {
@@ -89,7 +121,7 @@ export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range
             "justify-start text-left font-normal",
             !dateRange?.from && "text-muted-foreground",
             dateRange?.from && !dateRange?.to && "text-primary",
-            className
+            className,
           )}
         >
           <CalendarDays className="mr-2 h-4 w-4" />
@@ -132,7 +164,7 @@ export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range
                 </p>
               </div>
             )}
-            
+
             <Calendar
               mode="range"
               selected={dateRange}
@@ -144,7 +176,7 @@ export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range
               initialFocus
               className="border-0"
             />
-            
+
             <div className="flex justify-between mt-3 pt-3 border-t">
               <Button
                 variant="ghost"
@@ -156,7 +188,7 @@ export function DatePicker({ dateRange, onSelect, placeholder = "Pick date range
               >
                 Clear
               </Button>
-              
+
               {dateRange?.from && dateRange?.to && (
                 <Button
                   size="sm"
@@ -186,8 +218,14 @@ interface MonthYearSelectorProps {
   maxYear: number;
 }
 
-function MonthYearSelector({ currentDate, onSelect, maxYear }: MonthYearSelectorProps) {
-  const [selectedYear, setSelectedYear] = React.useState(currentDate.getFullYear());
+function MonthYearSelector({
+  currentDate,
+  onSelect,
+  maxYear,
+}: MonthYearSelectorProps) {
+  const [selectedYear, setSelectedYear] = React.useState(
+    currentDate.getFullYear(),
+  );
 
   return (
     <div className="p-4 space-y-4">
@@ -200,7 +238,7 @@ function MonthYearSelector({ currentDate, onSelect, maxYear }: MonthYearSelector
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            {YEARS.filter(year => year <= maxYear).map((year) => (
+            {YEARS.filter((year) => year <= maxYear).map((year) => (
               <SelectItem key={year} value={year.toString()}>
                 {year}
               </SelectItem>
@@ -212,14 +250,14 @@ function MonthYearSelector({ currentDate, onSelect, maxYear }: MonthYearSelector
       <div className="grid grid-cols-3 gap-2">
         {MONTHS.map((month, index) => {
           const isDisabled = selectedYear >= 2027;
-          
+
           return (
             <Button
               key={month}
               variant={
-                currentDate.getMonth() === index && 
+                currentDate.getMonth() === index &&
                 currentDate.getFullYear() === selectedYear
-                  ? "default" 
+                  ? "default"
                   : "ghost"
               }
               onClick={() => onSelect(index, selectedYear)}

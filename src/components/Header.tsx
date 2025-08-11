@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Sun, Moon, AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-
 interface HeaderProps {
   toggleDarkMode: () => void;
   isDarkMode: boolean;
-  stickySearchBar?: React.ReactNode; 
-  showStickySearchBar?: boolean;     
+  stickySearchBar?: React.ReactNode;
+  showStickySearchBar?: boolean;
 }
 
-function Header({ toggleDarkMode, isDarkMode, showStickySearchBar = false,
-  stickySearchBar  }: HeaderProps) {
+function Header({
+  toggleDarkMode,
+  isDarkMode,
+  showStickySearchBar = false,
+  stickySearchBar,
+}: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

@@ -1,6 +1,12 @@
 // components/Search/PriceRangeFilter.tsx
 import React from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { PRICE_RANGES } from "@/data/searchConstants";
 
 interface PriceRangeFilterProps {
@@ -10,7 +16,7 @@ interface PriceRangeFilterProps {
 
 export const PriceRangeFilter: React.FC<PriceRangeFilterProps> = ({
   priceRange,
-  onChange
+  onChange,
 }) => {
   return (
     <div className="mb-8">
