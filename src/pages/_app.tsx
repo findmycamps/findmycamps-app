@@ -6,8 +6,8 @@ import { AuthProvider } from "@/context/AuthContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      // By wrapping the entire application in a div or main tag with these class names,
-      // the Geist fonts will be applied globally as the default sans-serif and mono fonts.
+    // By wrapping the entire application in a div or main tag with these class names,
+    // the Geist fonts will be applied globally as the default sans-serif and mono fonts.
     <AuthProvider>
       <main className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         <Component {...pageProps} />

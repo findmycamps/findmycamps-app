@@ -11,13 +11,13 @@ export interface KidProfile {
 export interface UserProfile {
   userId: string; // Corresponds to Firebase Auth UID
   email: string;
-  
+
   // This will be determined by the selections in the signup form
-  roles: UserType[]; 
+  roles: UserType[];
 
   firstName: string;
   lastName: string;
-  
+
   location: {
     city: string;
     province: string;
