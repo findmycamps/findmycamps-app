@@ -1,4 +1,4 @@
-// components/SearchBar.tsx - With controlled input support
+// components/SearchBar.tsx - Complete file with enhanced dark mode support
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Search, MapPin, Navigation, CalendarDays, X } from "lucide-react";
@@ -35,7 +35,7 @@ interface SearchBarProps {
   showFindMyMatchButton?: boolean;
   personalizedSuggestions?: any[];
 
-  // ✅ NEW: Controlled input props
+  // Controlled input props
   value?: string; // External keyword value
   onValueChange?: (value: string) => void; // Callback when user types
 }
@@ -67,12 +67,12 @@ function SearchBar({
   showClearButton = false,
   showFindMyMatchButton = false,
   personalizedSuggestions = [],
-  value, // ✅ NEW: External keyword value
-  onValueChange, // ✅ NEW: Callback for typing
+  value, // External keyword value
+  onValueChange, // Callback for typing
 }: SearchBarProps) {
   const router = useRouter();
 
-  // ✅ UPDATED: Use external value if provided, otherwise internal state
+  // Use external value if provided, otherwise internal state
   const [keyword, setKeyword] = useState(value || "");
   const [selectedDateRange, setSelectedDateRange] = useState<
     DateRange | undefined
@@ -95,7 +95,7 @@ function SearchBar({
   const inputRef = useRef<HTMLInputElement>(null);
   const datePickerRef = useRef<HTMLDivElement>(null);
 
-  // ✅ NEW: Sync internal keyword with external value
+  // Sync internal keyword with external value
   useEffect(() => {
     if (value !== undefined) {
       setKeyword(value);
@@ -139,7 +139,7 @@ function SearchBar({
     }
   };
 
-  // ✅ UPDATED: Handle keyword changes
+  // Handle keyword changes
   const handleKeywordChange = (newValue: string) => {
     setKeyword(newValue);
     if (onValueChange) {
@@ -205,7 +205,7 @@ function SearchBar({
     }
   };
 
-  // ✅ UPDATED: Clear/reset function
+  // Clear/reset function
   const handleClear = () => {
     const clearedKeyword = "";
     setKeyword(clearedKeyword);
@@ -293,7 +293,7 @@ function SearchBar({
     setSelectedDateRange(undefined);
   };
 
-  // ✅ UPDATED: Use controlled value for display
+  // Use controlled value for display
   const getDisplayText = () => {
     if (isGettingLocation) return "Getting your location...";
 
@@ -348,7 +348,7 @@ function SearchBar({
           selectedDateRange) && (
           <div className="mb-4 flex flex-wrap justify-center gap-2">
             {selectedLocation && (
-              <div className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+              <div className="bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-700 px-3 py-1 rounded-full text-sm font-medium flex items-center">
                 📍 {selectedLocationLabel}
                 <button
                   onClick={() => {
@@ -357,7 +357,7 @@ function SearchBar({
                     setLocationType("all");
                     setLocationCoords(null);
                   }}
-                  className="ml-2 text-blue-400 hover:text-blue-600"
+                  className="ml-2 text-blue-400 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-200"
                 >
                   ×
                 </button>
@@ -367,7 +367,7 @@ function SearchBar({
             {selectedCategories.map((category) => (
               <div
                 key={category}
-                className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium flex items-center"
+                className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-foreground border border-primary/20 dark:border-primary/30 px-3 py-1 rounded-full text-sm font-medium flex items-center"
               >
                 📂 {category}
                 <button
@@ -376,7 +376,7 @@ function SearchBar({
                       prev.filter((cat) => cat !== category),
                     )
                   }
-                  className="ml-2 text-primary/60 hover:text-primary"
+                  className="ml-2 text-primary/60 dark:text-primary-foreground/70 hover:text-primary dark:hover:text-primary-foreground"
                 >
                   ×
                 </button>
@@ -384,7 +384,7 @@ function SearchBar({
             ))}
 
             {selectedDateRange?.from && (
-              <div className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+              <div className="bg-green-50 dark:bg-green-900/50 text-green-600 dark:text-green-300 border border-green-200 dark:border-green-700 px-3 py-1 rounded-full text-sm font-medium flex items-center">
                 📅{" "}
                 {selectedDateRange.to
                   ? `${selectedDateRange.from.toLocaleDateString("en-US", { month: "short", day: "numeric" })} - ${selectedDateRange.to.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`
@@ -394,7 +394,7 @@ function SearchBar({
                     })}
                 <button
                   onClick={() => setSelectedDateRange(undefined)}
-                  className="ml-2 text-green-400 hover:text-green-600"
+                  className="ml-2 text-green-400 dark:text-green-400 hover:text-green-600 dark:hover:text-green-200"
                 >
                   ×
                 </button>
@@ -409,10 +409,25 @@ function SearchBar({
             "transition-all duration-300 ease-out",
             floatingMode
               ? "bg-transparent rounded-full border-0 shadow-none"
-              : "bg-white rounded-full shadow-lg border",
+              : cn(
+                  "rounded-full shadow-lg border",
+                  // Enhanced dark mode styling
+                  "bg-white dark:bg-gray-900/95", // Stronger dark background
+                  "border-gray-200 dark:border-gray-700", // Visible dark border
+                  "dark:shadow-2xl dark:shadow-black/50", // Enhanced dark shadow
+                ),
             !floatingMode && isFocused
-              ? "shadow-2xl scale-[1.02] border-primary/20"
-              : !floatingMode && "shadow-md hover:shadow-lg border-gray-200",
+              ? cn(
+                  "shadow-2xl scale-[1.02]",
+                  "border-primary/20 dark:border-primary/40", // Better dark mode focus border
+                  "dark:bg-gray-800/95", // Lighter when focused in dark mode
+                )
+              : !floatingMode &&
+                  cn(
+                    "shadow-md hover:shadow-lg",
+                    "hover:dark:bg-gray-800/90", // Hover state for dark mode
+                    "hover:dark:border-gray-600", // Hover border for dark mode
+                  ),
           )}
         >
           <div
@@ -421,7 +436,7 @@ function SearchBar({
             <div className="flex-1 relative">
               <div
                 className={cn(
-                  "absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400",
+                  "absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500",
                   floatingMode && "left-4",
                 )}
               >
@@ -433,12 +448,15 @@ function SearchBar({
                 placeholder={getPlaceholderText()}
                 value={getDisplayText()}
                 onChange={(e) => {
-                  handleKeywordChange(e.target.value); // ✅ UPDATED: Use new handler
+                  handleKeywordChange(e.target.value);
                 }}
                 onFocus={handleInputFocus}
                 disabled={isGettingLocation}
                 className={cn(
-                  "w-full py-4 text-base font-medium placeholder:text-gray-400 bg-transparent focus:outline-none disabled:opacity-50",
+                  "w-full py-4 text-base font-medium bg-transparent focus:outline-none disabled:opacity-50",
+                  // Better dark mode text and placeholder colors
+                  "text-gray-900 dark:text-gray-100", // Proper text color
+                  "placeholder:text-gray-400 dark:placeholder:text-gray-500", // Better placeholder visibility
                   floatingMode
                     ? "pl-12 pr-4 rounded-full"
                     : "pl-12 pr-4 rounded-l-full",
@@ -452,7 +470,7 @@ function SearchBar({
                   <button
                     type="button"
                     onClick={clearSelections}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-sm"
                   >
                     ✕
                   </button>
@@ -465,7 +483,8 @@ function SearchBar({
                 ref={datePickerRef}
                 className={cn(
                   "flex items-center pl-4",
-                  !floatingMode && "border-l border-gray-200",
+                  !floatingMode &&
+                    "border-l border-gray-200 dark:border-gray-700",
                 )}
                 onMouseDown={(e) => e.stopPropagation()}
               >
@@ -473,7 +492,7 @@ function SearchBar({
                   dateRange={selectedDateRange}
                   onSelect={setSelectedDateRange}
                   placeholder="When?"
-                  className="border-0 bg-transparent shadow-none hover:bg-gray-50 rounded-full"
+                  className="border-0 bg-transparent shadow-none hover:bg-gray-50 dark:hover:bg-gray-800 rounded-full"
                 />
               </div>
             )}
@@ -495,7 +514,12 @@ function SearchBar({
                     size={floatingMode ? "sm" : "lg"}
                     onClick={handleClear}
                     className={cn(
-                      "text-muted-foreground hover:text-foreground rounded-full transition-all duration-200",
+                      "rounded-full transition-all duration-200",
+                      // Better dark mode styling for clear button
+                      "text-gray-600 dark:text-gray-300",
+                      "hover:text-gray-900 dark:hover:text-gray-100",
+                      "border-gray-300 dark:border-gray-600",
+                      "hover:bg-gray-100 dark:hover:bg-gray-700",
                       floatingMode ? "h-10 px-3" : "h-12 px-4",
                     )}
                   >
@@ -544,11 +568,11 @@ function SearchBar({
 
       {/* Only show dropdown if not in floating mode */}
       {!floatingMode && showDropdown && isOpen && !isGettingLocation && (
-        <div className="absolute top-full mt-2 w-full bg-white rounded-xl border border-gray-200 shadow-lg z-40 max-h-96 overflow-y-auto">
+        <div className="absolute top-full mt-2 w-full bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg dark:shadow-2xl dark:shadow-black/25 z-40 max-h-96 overflow-y-auto">
           <div className="p-6">
             {enabledFilters.includes("location") && (
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">
                   Suggested destinations
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -557,13 +581,13 @@ function SearchBar({
                       key={index}
                       onClick={() => handleSuggestionClick(suggestion)}
                       className={cn(
-                        "p-4 hover:bg-gray-50 rounded-lg transition-colors text-center group",
+                        "p-4 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors text-center group",
                         selectedLocation === suggestion.value &&
-                          "bg-blue-50 border border-blue-200",
+                          "bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700",
                       )}
                     >
-                      <suggestion.icon className="w-7 h-7 mx-auto mb-2 text-gray-600 group-hover:text-primary" />
-                      <div className="text-md font-medium group-hover:text-primary">
+                      <suggestion.icon className="w-7 h-7 mx-auto mb-2 text-gray-600 dark:text-gray-400 group-hover:text-primary" />
+                      <div className="text-md font-medium text-gray-700 dark:text-gray-200 group-hover:text-primary">
                         {suggestion.label}
                       </div>
                     </button>
@@ -576,19 +600,19 @@ function SearchBar({
               enabledFilters.includes("categories") && (
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-gray-700">
+                    <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200">
                       Explore by category
                     </h3>
                     {selectedCategories.length > 0 && (
                       <div className="flex items-center gap-2">
-                        <span className="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+                        <span className="text-sm text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
                           {selectedCategories.length} selected
                         </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => setSelectedCategories([])}
-                          className="text-sm text-gray-500 hover:text-gray-700 h-auto py-1 px-2"
+                          className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 h-auto py-1 px-2"
                         >
                           Clear all
                         </Button>
@@ -608,9 +632,9 @@ function SearchBar({
                             key={index}
                             onClick={() => handleCategoryClick(category.name)}
                             className={cn(
-                              "flex flex-col items-center p-3 hover:bg-gray-50 rounded-lg transition-colors text-center group relative",
+                              "flex flex-col items-center p-3 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors text-center group relative",
                               isSelected &&
-                                "bg-primary/10 border border-primary/20",
+                                "bg-primary/10 dark:bg-primary/20 border border-primary/20 dark:border-primary/40",
                             )}
                           >
                             {isSelected && (
@@ -626,7 +650,7 @@ function SearchBar({
                             >
                               <Icon className={cn("w-6 h-6", category.color)} />
                             </div>
-                            <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
+                            <span className="text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-primary">
                               {category.name}
                             </span>
                           </button>
