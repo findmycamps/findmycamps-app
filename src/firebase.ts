@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBWWySUe4OohnxU3AjZ17fzkw5QypoUJso",
@@ -15,6 +16,7 @@ const firebaseConfig = {
 // Prevent duplicate app initialization
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
 // Optional: Analytics (safe for browser only)
 let analytics: ReturnType<typeof getAnalytics> | null = null;
@@ -24,4 +26,4 @@ isSupported().then((enabled) => {
   }
 });
 
-export { app, db, analytics };
+export { app, db, auth, analytics };
