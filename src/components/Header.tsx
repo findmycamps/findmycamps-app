@@ -5,9 +5,16 @@ import { Button } from "@/components/ui/button";
 interface HeaderProps {
   toggleDarkMode: () => void;
   isDarkMode: boolean;
+  stickySearchBar?: React.ReactNode;
+  showStickySearchBar?: boolean;
 }
 
-function Header({ toggleDarkMode, isDarkMode }: HeaderProps) {
+function Header({
+  toggleDarkMode,
+  isDarkMode,
+  showStickySearchBar = false,
+  stickySearchBar,
+}: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -19,6 +26,14 @@ function Header({ toggleDarkMode, isDarkMode }: HeaderProps) {
           </div>
           <span className="font-bold text-lg text-foreground">FindMyCamps</span>
         </a>
+
+        <div className="flex-1 max-w-md mx-6">
+          {showStickySearchBar && stickySearchBar && (
+            <div className="animate-in slide-in-from-top-2 duration-300">
+              {stickySearchBar}
+            </div>
+          )}
+        </div>
 
         <nav className="hidden md:flex items-center space-x-2">
           <Button variant="ghost" size="icon" onClick={toggleDarkMode}>
