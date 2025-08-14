@@ -24,7 +24,7 @@ export default function HomePage() {
   const [searchCriteria, setSearchCriteria] = useState<SearchCriteria>({
     keyword: "",
     location: "ALL",
-    date: undefined,
+    dateRange: undefined,
   });
 
   const [isDarkMode, setIsDarkMode] = useState(false);

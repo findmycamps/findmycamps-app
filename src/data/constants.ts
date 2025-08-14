@@ -23,7 +23,7 @@ export interface Province {
 
 export const CATEGORIES_WITH_ICONS: Category[] = [
   {
-    name: "All Categories",
+    name: "All",
     icon: Compass,
     color: "text-blue-500",
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
