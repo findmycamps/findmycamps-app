@@ -2,13 +2,13 @@ name: CD
 
 on:
   push:
-    branches: [ main ]   # Only runs on main branch pushes
+    branches: [main] # Only runs on main branch pushes
 
 jobs:
   deploy-to-render:
     runs-on: ubuntu-latest
     environment:
-      name: Render-Prod   # Make sure this matches your GitHub Environment name
+      name: Render-Prod # Make sure this matches your GitHub Environment name
 
     steps:
       - name: Trigger Render Deploy

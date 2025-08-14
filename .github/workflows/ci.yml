@@ -2,9 +2,9 @@ name: CI & CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
@@ -31,5 +31,5 @@ jobs:
       - name: Build the app
         run: npm run build
 
-     # - name: Run tests
-     #    run: npm test || echo "No tests defined"
+      # - name: Run tests
+      #    run: npm test || echo "No tests defined"

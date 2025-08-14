@@ -1,4 +1,3 @@
-
 # FindMyCamps
 
 **FindMyCamps** is a React + Tailwind CSS web application that helps parents, guardians, and childcare providers discover summer and seasonal camps for children across Canada. The platform enables users to search, compare, and book camps based on various interests, locations, and accessibility needs.
@@ -26,24 +25,27 @@
 ### Installation
 
 1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/findmycamps/findmycamps-app.git
-    cd findmycamps-app
-    ```
+
+   ```bash
+   git clone https://github.com/findmycamps/findmycamps-app.git
+   cd findmycamps-app
+   ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
 3. **Start the development server:**
-    ```bash
-    npm start
-    # or
-    yarn start
-    ```
+
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
 4. Open [http://localhost:3000](http://localhost:3000) to view in your browser.
 
@@ -79,5 +81,3 @@ src/
 This project is [MIT licensed](LICENSE).
 
 ---
-
-

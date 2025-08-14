@@ -1,32 +1,41 @@
-// A new interface to define the structure for each child's profile
+export type UserType = "parent" | "camp" | "soloCamper";
+
+// Profile for an individual child
 export interface KidProfile {
   name: string;
-  age: number;
-  interests?: string[]; // Optional: e.g., ['soccer', 'painting']
+  age: string; // Storing as string from form, can be converted to number later
+  interests: string[];
 }
 
-export interface User {
-  userId: string;
+// The main user profile structure to be stored in Firestore
+export interface UserProfile {
+  userId: string; // Corresponds to Firebase Auth UID
   email: string;
-  type: "parent" | "camp";
 
-  // --- Personal Information (Updated) ---
-  firstName?: string; // Added
-  lastName?: string; // Added
-  phone?: string;
-  location?: {
+  // This will be determined by the selections in the signup form
+  roles: UserType[];
+
+  firstName: string;
+  lastName: string;
+
+  location: {
     city: string;
     province: string;
   };
 
-  // --- Child Information (Updated) ---
-  kids?: KidProfile[]; // Added to store detailed info for each child
-  numOfKids?: number; // Can be derived from kids.length or kept for quick access
+  // User's personal interests, if they are a "soloCamper"
+  personalInterests: string[];
+
+  // Children's details, if they are a "parent"
+  children: KidProfile[];
+  // numOfKids?: number; //Not needed as can be derived from userProfile.children.length
 
   // --- Personalization & Activity ---
   tags?: string[];
+  phone?: string;
   savedCamps?: string[];
   recentSearches?: string[];
   visitedCamps?: string[];
   notes?: string;
+  createdAt: string; // ISO date string
 }
